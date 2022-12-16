@@ -3,7 +3,7 @@ import { main } from '../Resources/personalInfo';
 
 const AboutMe = () => {
   const { name, image, bio, address, phone, email, resumeDownload } = main;
-  const { street, city, state, zip } = address;
+  const { city, state, zip } = address;
   const profilePic = `/images/${image}`;
 
   return (
