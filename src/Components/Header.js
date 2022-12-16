@@ -1,4 +1,3 @@
-import './Header.css';
 import React from 'react';
 import ParticlesBg from 'particles-bg';
 import { main } from '../Resources/personalInfo';
