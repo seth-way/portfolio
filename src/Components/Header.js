@@ -2,7 +2,7 @@ import React from 'react';
 import ParticlesBg from 'particles-bg';
 import { main } from '../Resources/personalInfo';
 
-const Header = () => {
+function Header() {
   const { linkedIn, github, name, description } = main;
   const firstName = name.split(' ')[0];
 
@@ -82,6 +82,6 @@ const Header = () => {
       </p>
     </header>
   );
-};
+}
 
 export default Header;
