@@ -60,7 +60,7 @@ const Contact = () => {
   );
 
   const renderForm = () => (
-    <section id='contact'>
+    <section id='contact' className='element'>
       <div className='row section-head'>
         <div className='two columns header-col'>
           <h1>

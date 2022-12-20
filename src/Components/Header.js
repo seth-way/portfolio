@@ -1,13 +1,53 @@
 import React from 'react';
 import ParticlesBg from 'particles-bg';
+import * as Scroll from 'react-scroll';
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from 'react-scroll';
 import { main } from '../Resources/personalInfo';
 
 function Header() {
   const { linkedIn, github, name, description } = main;
   const firstName = name.split(' ')[0];
 
+  const handleSetActive = to => {
+    console.log('handleSetActive');
+    console.log(to);
+  };
+
+  const handleSetInactive = to => {
+    console.log('handleSetInactive');
+    console.log(to);
+  };
+
+  const createHeaderLink = name => (
+    <Link
+      activeClass='current'
+      to={name}
+      spy={true}
+      hashSpy={true}
+      smooth={true}
+      offset={0}
+      duration={1000}
+      delay={500}
+      isDynamic={true}
+      spyThrottle={500}
+      key={name}
+    >
+      {name}
+    </Link>
+  );
+
+  const headerLinks = ['home', 'about', 'resume', 'contact'];
+
   return (
-    <header>
+    <header id='home'>
       <ParticlesBg color='#305496' num={200} type='cobweb' bg={true} />
       <nav id='nav-wrap'>
         <a className='mobile-btn' href='#nav-wrap' title='Show navigation'>
@@ -17,38 +57,9 @@ function Header() {
           Hide navigation
         </a>
 
-        <ul id='nav' className='nav'>
-          <li className='current'>
-            <a className='smoothscroll' href='#home'>
-              Home
-            </a>
-          </li>
-          <li>
-            <a className='smoothscroll' href='#about'>
-              About
-            </a>
-          </li>
-          <li>
-            <a className='smoothscroll' href='#resume'>
-              Resume
-            </a>
-          </li>
-          <li>
-            <a className='smoothscroll' href='#portfolio'>
-              Portfolio
-            </a>
-          </li>
-          <li>
-            <a className='smoothscroll' href='#algorithms'>
-              Algorithms
-            </a>
-          </li>
-          <li>
-            <a className='smoothscroll' href='#contact'>
-              Contact
-            </a>
-          </li>
-        </ul>
+        <div id='nav' className='nav'>
+          {headerLinks.map(name => createHeaderLink(name))}
+        </div>
       </nav>
       <div className='row banner'>
         <div className='banner-text'>
@@ -76,9 +87,18 @@ function Header() {
         </div>
       </div>
       <p className='scrolldown'>
-        <a className='smoothscroll' href='#about'>
+        <Link
+          to='about'
+          smooth={true}
+          offset={0}
+          duration={1000}
+          delay={500}
+          isDynamic={true}
+          spyThrottle={500}
+          key={'about_2'}
+        >
           <i className='icon-down-circle'></i>
-        </a>
+        </Link>
       </p>
     </header>
   );

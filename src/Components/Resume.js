@@ -56,7 +56,7 @@ const Resume = () => {
   });
 
   return (
-    <section id='resume'>
+    <section id='resume' className='element'>
       <div className='row education'>
         <div className='three columns header-col'>
           <h1>

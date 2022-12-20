@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import ReactGA from 'react-ga';
 import Header from './Components/Header';
 import AboutMe from './Components/AboutMe';
+import Projects from './Components/Projects';
 import Resume from './Components/Resume';
 import Contact from './Components/Contact';
 
@@ -15,6 +16,7 @@ const App = () => {
     <div className='App'>
       <Header />
       <AboutMe />
+      <Projects />
       <Resume />
       <Contact />
     </div>

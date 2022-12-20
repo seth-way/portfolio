@@ -7,7 +7,7 @@ const AboutMe = () => {
   const profilePic = `images/${image}`;
 
   return (
-    <section id='about'>
+    <section id='about' className='element'>
       <div className='row'>
         <div className='three columns'>
           <img
