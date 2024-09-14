@@ -1,0 +1,48 @@
+[
+  {
+    "title": "Overlook Hotel",
+    "short": "overlook",
+    "description": "A hotel management tool for hotel customers to manage room bookings and calculate bills.",
+    "contributors": [],
+    "tech": ["js", "css", "html", "webpack"],
+    "notes": [
+      "In order to deploy this UI to github pages the locally running API also had to be deployed. I worked through this process and tracked my steps in a public gist so that my classmates and myself have access to a working example tutorial.",
+      "The finished product is not only mobile friendly, but also received a 100 accessibility score from Google Lighthouse."
+    ],
+    "links": {
+      "repo": "https://github.com/seth-way/Overlook-Hotel",
+      "live": "https://seth-way.github.io/Overlook-Hotel/"
+    }
+  },
+  {
+    "title": "What's Cookin'?",
+    "short": "cookin",
+    "description": "This app is a recipe tracking / meal planning application that allows users to view recipes they want to cook & plan shopping trips around them. Users can view a list of recipes, filter them by name or tag, & choose recipes to cook.",
+    "contributors": ["Carissa Hluchan", "Willem Pol", "Marshall Hotaling"],
+    "tech": ["js", "css", "html", "webpack"],
+    "notes": [
+      "Our app crashed when conflicting merges did not present themselves as 'merge conflicts.' By visitting our commit history and utilizing a staging branch, we were able to introduce and remove all the appropriate code to successfully complete the merge.",
+      "The recipe cost slider is a complex UI component made of 2 separate slider inputs. In order to make working with it easier, we used closures so that the cost-slider object had access to all the necessary variables."
+    ],
+    "links": {
+      "repo": "https://github.com/seth-way/whats-cookin",
+      "live": "https://seth-way.github.io/whats-cookin/"
+    }
+  },
+  {
+    "title": "Rock · Paper · Scissors",
+    "short": "rps",
+    "description": "This app allows 1 or 2 users to play a fun & interactive game of Rock, Paper, Scissors.",
+    "contributors": [],
+    "tech": ["js", "css", "html"],
+    "notes": [
+      "This project challenged my understanding of CSS animations & async delays. It was difficult, but rewarding to create a seamless UX, while keeping possible bugs out of the DOM during delays.",
+      "This is the most complex CSS I have built to date & required research in CSS variables, color blending, @keyframe animations, transitions & layering through absolute-positioning. I'm very pleased with the final product.",
+      "The 'console' was a complicated & layered element that required careful planning & manipulation to create. Parts needed to be hidden & cursor events disabled as necessary to eliminate unwanted DOM activities."
+    ],
+    "links": {
+      "repo": "https://github.com/seth-way/rock-paper-scissors",
+      "live": "https://seth-way.github.io/rock-paper-scissors/"
+    }
+  }
+]

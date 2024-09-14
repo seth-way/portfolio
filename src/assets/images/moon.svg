@@ -1,0 +1,14 @@
+<svg
+  id='moon'
+  className='darkmode-icon'
+  width='24'
+  height='24'
+  viewBox='0 0 24 24'
+  fill='none'
+  xmlns='http://www.w3.org/2000/svg'
+>
+  <path
+    d='M21 12.79C20.36 12.93 19.68 13 19 13C14.58 13 11 9.42 11 5C11 4.32 11.07 3.64 11.21 3C7.61 3.64 5 7.08 5 11C5 15.42 8.58 19 13 19C16.92 19 20.36 16.39 21 12.79Z'
+    fill='currentColor'
+  />
+</svg>

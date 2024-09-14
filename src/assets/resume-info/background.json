@@ -1,0 +1,14 @@
+{
+  "fullName": "Seth Way",
+  "role": "Software Developer",
+  "image": "headShot.jpg",
+  "bio": "In 2019 I honorably completed my Military Service. Since then I’ve graduated from the Microsoft Software & Systems Academy and attended the Turing School, one of the nation’s leading Software Engineering bootcamps. I’ve learned the basics and some highly advanced concepts in several programming languages. I've put those skills to use to create interesting and useful tools. I’ve met project deadlines while working with teams of incredibly talented individuals. I’m excited and motivated to take on the next challenge.",
+  "email": "way.sethaniel@gmail.com",
+  "phone": "570-419-2673",
+  "github": "https://github.com/seth-way",
+  "linkedIn": "https://www.linkedin.com/in/sethway",
+  "address": {
+    "city": "Keuka Lake",
+    "state": "NY"
+  }
+}
