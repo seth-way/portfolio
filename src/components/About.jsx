@@ -41,19 +41,19 @@ const About = () => {
     >
       <div className='flex flex-col md:flex-row items-center gap-8'>
         <div
-          id='profilePicBorder'
+          id='profile-pic-border'
           className='w-[min(50vh,50vw)] min-w-124 max-w-80'
         >
-          <img src={headShot} alt='professional headshot' />
+          <img id="profile-pic" src={headShot} alt='profile headshot of dev'/>
         </div>
         <section className='flex flex-col items-center'>
-          <h2 className='mb-4 text-secondary_C'>About Me</h2>
+          <h2 className='mb-4'>About Me</h2>
           <p className='max-w-sm'>{bio}</p>
         </section>
       </div>
       <div className='flex flex-col md:flex-row items-center gap-8'>
-        <section>
-          <h3 className='mb-4 text-secondary_C'>Contact Details</h3>
+        <section className="flex flex-col items-center">
+          <h3 className='mb-4 font-bold text-xl text-center text-nowrap w-fit'>Contact Details</h3>
           <p className='ms-12'>
             phone:{' '}
             <Button

@@ -1,6 +1,7 @@
 import Img from '@/components/ui/img';
 import {
   Card,
+  CardFooter,
   CardContent,
   CardDescription,
   CardHeader,
@@ -8,13 +9,15 @@ import {
 } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { motion } from 'framer-motion';
-import { IProject } from '@/assets/resume-info/resumeTypes';
+import badges from '@/assets/resume-info/badges.json';
+
+const badgeURL = 'https://img.shields.io/badge/';
 
 const Project = ({ project, handleClick }) => {
   const { title, description, tech } = project;
   return (
     <motion.div
-      className='w-[min(250px,90vw)] aspect-[2/3]'
+      className='w-[min(250px,90vw)] aspect-[2/3] group hover:cursor-pointer'
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.9 }}
       transition={{ type: 'spring' }}
@@ -29,17 +32,20 @@ const Project = ({ project, handleClick }) => {
           </CardDescription>
         </CardHeader>
         <Separator />
-        <CardContent className='h-2/3 w-full flex flex-wrap-reverse items-center justify-center gap-x-2 gap-y-0 align-baseline'>
-          {tech.map((type, idx) => (
-            <Img
-              imgName={type}
-              folder='tech'
-              type='svg'
-              svgProp={{ width: 50, height: 50 }}
-              key={`project_${title}_${idx}`}
-            />
-          ))}
-        </CardContent>
+        <CardFooter className='h-2/3 w-full flex flex-wrap items-center justify-center gap-4 p-4'>
+          {tech.map((type, idx) =>
+            badges[type] ? (
+              <img
+                className='opacity-70 group-hover:opacity-100'
+                src={`${badgeURL}${badges[type]}`}
+                alt={`${type} logo badge`}
+                key={`project_${title}_${idx}`}
+              />
+            ) : (
+              ''
+            )
+          )}
+        </CardFooter>
       </Card>
     </motion.div>
   );
