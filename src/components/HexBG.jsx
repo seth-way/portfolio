@@ -4,7 +4,7 @@ import Hex from './Hex';
 
 export default function HexBG() {
   const [width, height] = useWindowSize();
-  const gridRef = useRef<HTMLDivElement>(null);
+  const gridRef = useRef(null);
   const scaleFactor = 0.75;
   const [hexWidth, hexHeight, hexSide] = [100, 100, 40].map(
     original => original * scaleFactor

@@ -22,10 +22,9 @@ import {
   // DrawerTitle,
 } from '@/components/ui/drawer';
 import { Card } from '@/components/ui/card';
-import { IProject } from '@/assets/resume-info/resumeTypes';
 //import projects from '@/assets/resume-info/projects.json';
 
-const blankProject: IProject = {
+const blankProject = {
   title: '',
   short: '',
   description: '',
@@ -40,7 +39,7 @@ const blankProject: IProject = {
 
 const Projects = () => {
   const [open, setOpen] = useState(false);
-  const [currentProject, setProject] = useState<IProject>({ ...blankProject });
+  const [currentProject, setProject] = useState({ ...blankProject });
   const isDesktop = useMediaQuery('(min-width: 768px)');
 
   // const handleClick = (project: IProject) => {

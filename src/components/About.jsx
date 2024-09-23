@@ -9,7 +9,7 @@ import { Button } from './ui/button';
 import { ClipboardCopy, File } from 'lucide-react';
 
 const About = () => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef(null);
   useEffect(() => {
     const { current } = ref;
     if (current) {
@@ -28,9 +28,7 @@ const About = () => {
     }
   }, []);
 
-  const handleClick = (e: {
-    currentTarget: { innerText: string; focus: () => void };
-  }) => {
+  const handleClick = (e) => {
     navigator.clipboard.writeText(e.currentTarget.innerText);
     e.currentTarget.focus();
   };

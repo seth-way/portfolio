@@ -1,5 +1,4 @@
 import Img from '@/components/ui/img';
-import { IProject } from '@/assets/resume-info/resumeTypes';
 import { Button } from '@/components/ui/button';
 import {
   DialogContent,
@@ -16,14 +15,7 @@ import {
   DrawerTitle,
 } from '@/components/ui/drawer';
 
-type IContentType = 'drawer' | 'dialog';
-
-interface IProps {
-  type: IContentType;
-  project: IProject;
-}
-
-const Content = ({ type, project }: IProps) => {
+const Content = ({ type, project }) => {
   const { title, description, short } = project;
   return type === 'dialog' ? (
     <DialogContent className='sm:max-w-[425px]'>

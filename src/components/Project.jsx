@@ -10,12 +10,7 @@ import { Separator } from '@/components/ui/separator';
 import { motion } from 'framer-motion';
 import { IProject } from '@/assets/resume-info/resumeTypes';
 
-interface IProps {
-  project: IProject;
-  handleClick: (proj: IProject) => void;
-}
-
-const Project = ({ project, handleClick }: IProps) => {
+const Project = ({ project, handleClick }) => {
   const { title, description, tech } = project;
   return (
     <motion.div
@@ -35,7 +30,7 @@ const Project = ({ project, handleClick }: IProps) => {
         </CardHeader>
         <Separator />
         <CardContent className='h-2/3 w-full flex flex-wrap-reverse items-center justify-center gap-x-2 gap-y-0 align-baseline'>
-          {tech.map((type: string, idx: number) => (
+          {tech.map((type, idx) => (
             <Img
               imgName={type}
               folder='tech'

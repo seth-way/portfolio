@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-export function useDynamicSvgImport(iconName: string) {
-  const importedIconRef = useRef<React.FC<React.SVGProps<SVGElement>>>();
+export function useDynamicSvgImport(iconName) {
+  const importedIconRef = useRef();
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<unknown>();
+  const [error, setError] = useState();
 
   useEffect(() => {
     setLoading(true);
     // dynamically import the mentioned svg icon name in props
-    const importSvgIcon = async (): Promise<void> => {
+    const importSvgIcon = async () => {
       // please make sure all your svg icons are placed in the same directory
       // if we want that part to be configurable then instead of iconName we will send iconPath as prop
       try {
@@ -26,5 +26,5 @@ export function useDynamicSvgImport(iconName: string) {
     importSvgIcon();
   }, [iconName]);
 
-  return { error, loading, SvgIcon: importedIconRef.current };
+  return { error, loading, SvgIcon };
 }

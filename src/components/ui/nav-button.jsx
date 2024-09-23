@@ -1,13 +1,6 @@
 import { Button } from './button';
-import { ILink } from '../NavBar';
 
-interface IProps {
-  link: ILink;
-  currentLink: ILink;
-  handleClick: React.MouseEventHandler<HTMLButtonElement>;
-}
-
-export default function NavButton({ link, currentLink, handleClick }: IProps) {
+export default function NavButton({ link, currentLink, handleClick }) {
   const class1 = 'absolute text-primary_C font-medium bottom-0';
   const class2 =
     'transition-[height] duration-1000 ease-in-out origin-bottom absolute font-medium  bottom-0';

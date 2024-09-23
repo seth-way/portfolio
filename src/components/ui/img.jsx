@@ -1,16 +1,6 @@
 import { useState, useEffect } from 'react';
 
-interface IProps {
-  imgName: string;
-  folder: string;
-  type: string;
-  svgProp?: React.DetailedHTMLProps<
-    React.ImgHTMLAttributes<HTMLImageElement>,
-    HTMLImageElement
-  >;
-}
-
-export default function Img({ imgName, folder, type, svgProp }: IProps) {
+export default function Img({ imgName, folder, type, svgProp }) {
   const [image, setImage] = useState(null);
   useEffect(() => {
     const importIMG = async () => {

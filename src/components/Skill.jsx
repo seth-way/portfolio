@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 
 const textColors = ['primary_C', 'secondary_C', 'text'];
 
-const getTextColor = (idx: number) => textColors[idx % textColors.length];
+const getTextColor = (idx) => textColors[idx % textColors.length];
 
-const getLevelStyle = (value: number) => {
+const getLevelStyle = (value) => {
   if (value < 30) return { fontSize: 'clamp(0.8rem, 2vw, 1rem)' };
   if (value < 50) return { fontSize: 'clamp(1.2rem, 2.5vw, 1.7rem)' };
   if (value < 70) return { fontSize: 'clamp(1.6em, 3vw, 2.3rem)' };
@@ -12,17 +12,7 @@ const getLevelStyle = (value: number) => {
   return { fontSize: 'clamp(2.4em, 4vw, 3.5rem)' };
 };
 
-interface IProps {
-  skillInfo: ISkillInfo;
-  idx: number;
-}
-
-interface ISkillInfo {
-  skill: string;
-  value: number;
-}
-
-const SkillText = ({ skillInfo, idx }: IProps) => {
+const SkillText = ({ skillInfo, idx }) => {
   const { skill, value } = skillInfo;
 
   const color = getTextColor(idx);

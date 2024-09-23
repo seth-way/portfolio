@@ -1,12 +1,7 @@
 import { useEffect, useRef } from 'react';
 
-interface IProps {
-  width: number;
-  height: number;
-}
-
-const Hex = ({ width, height }: IProps) => {
-  const ref = useRef<SVGSVGElement>(null);
+const Hex = ({ width, height }) => {
+  const ref = useRef(null);
   const delay = Math.floor(Math.random() * 50) / 40;
   useEffect(() => {
     if (ref.current) {

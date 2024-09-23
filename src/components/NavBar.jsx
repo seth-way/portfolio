@@ -10,16 +10,15 @@ import {
 import { useAnimate, stagger } from 'framer-motion';
 import useWindowSize from '@/lib/hooks/use-window-size';
 
-export type ILink = 'home' | 'about' | 'skills' | 'projects';
-const links: ILink[] = ['home', 'about', 'skills', 'projects'];
+const links = ['home', 'about', 'skills', 'projects'];
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const scope = useMenuAnimation(isOpen);
-  const [currentSection, updateCurrent] = useState<ILink>('home');
+  const [currentSection, updateCurrent] = useState('home');
   const [width] = useWindowSize();
-  const navRef = useRef<HTMLElement>(null);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const navRef = useRef(null);
+  const timerRef = useRef(null);
   const breakPoint = 600;
 
   useEffect(() => {
@@ -63,7 +62,7 @@ export default function NavBar() {
     }
   }, [width]);
 
-  const handleClick: React.MouseEventHandler<HTMLButtonElement> = e => {
+  const handleClick = e => {
     console.log(e.currentTarget.value);
     const id = e.currentTarget.value;
     const element = document.getElementById(id);
@@ -124,7 +123,7 @@ function getActiveSection() {
   return sortedNearestFirst[0].id;
 }
 
-function useMenuAnimation(isOpen: boolean) {
+function useMenuAnimation(isOpen) {
   const [scope, animate] = useAnimate();
 
   useEffect(() => {
