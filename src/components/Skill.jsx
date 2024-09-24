@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-const textColors = ['primary_C', 'secondary_C', 'text'];
+const textColors = ['primary_C', '[#808080]', 'text'];
 
 const getTextColor = (idx) => textColors[idx % textColors.length];
 

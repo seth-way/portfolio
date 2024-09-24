@@ -91,6 +91,7 @@ h1 {
     --radius: 0.5rem;
     --primary_C: var(--red);
     --secondary_C: var(--blue);
+    --bg-hex: #f4f1f1;
   }
   .dark {
     --background: 240 10% 3.9%;
@@ -119,6 +120,7 @@ h1 {
     --chart-5: 340 75% 55%;
     --primary_C: var(--yellow);
     --secondary_C: var(--pink);
+    --bg-hex: #09090b;
   }
 }
 

@@ -28,7 +28,56 @@
       text-transform: uppercase;
       font-weight: 900;
       font-size: 2rem;
-      text-shadow: 0 0 4px gray;
+    }
+  }
+
+  #about {
+    --from: 30deg;
+    --pic-border: 0.6em;
+    --distance: 66%;
+
+    #profile-pic {
+      display: block;
+      border-radius: 999px;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      /* width: auto; */
+    }
+
+    #profile-pic-border {
+      position: relative;
+      width: min(50vh, 60vw);
+      max-width: 350px;
+      aspect-ratio: 1 / 1;
+      padding: 30px;
+    }
+
+    #profile-pic-border::after {
+      content: '';
+      border-radius: 999px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      stroke-linecap: round;
+      background: conic-gradient(
+        from var(--from),
+        var(--bg-hex),
+        var(--primary_C) var(--distance),
+        transparent var(--distance)
+      );
+      -webkit-mask: radial-gradient(
+        farthest-side,
+        transparent calc(100% - var(--pic-border)),
+        #fff calc(100% - var(--border) + 1px)
+      );
+      mask: radial-gradient(
+        farthest-side,
+        transparent calc(100% - var(--pic-border)),
+        #fff calc(100% - var(--pic-border) + 1px)
+      );
     }
   }
 }

@@ -11,5 +11,7 @@
   { "skill": "Vercel", "value": 50 },
   { "skill": "Node.js", "value": 80 },
   { "skill": "zustand", "value": 50 },
-  { "skill": "React Hooks", "value": 80 }
+  { "skill": "React Hooks", "value": 80 },
+  { "skill": "TypeScript", "value": 30 },
+  { "skill": "TailwindCSS", "value": 30 }
 ]
