@@ -14,16 +14,24 @@ import {
   DrawerHeader,
   DrawerTitle,
 } from '@/components/ui/drawer';
-import { Table, TableBody, TableRow, TableCell } from '@/components/ui/table';
+import {
+  Table,
+  TableHeader,
+  TableHead,
+  TableBody,
+  TableRow,
+  TableCell,
+} from '@/components/ui/table';
 import { ScrollArea } from '@radix-ui/react-scroll-area';
 import { Separator } from '@/components/ui/separator';
+import { Badge } from '@/components/ui/badge';
 
-
-const co_contributors = '@/assets/resume-info/co_contributors.json'
+import co_contributors from '@/assets/resume-info/co_contributors.json';
 
 const Content = ({ type, project }) => {
-  const { title, short, description, contributors, tech, notes, links } = project;
-
+  const { title, short, description, contributors, tech, notes, links } =
+    project;
+  console.log('ccccc', co_contributors);
   const displayTech = tech =>
     tech.length ? (
       <div id='project-tech'>
@@ -47,9 +55,16 @@ const Content = ({ type, project }) => {
   const displayNotes = notes =>
     notes.length ? (
       <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead className='text-center'>Project Notes</TableHead>
+          </TableRow>
+        </TableHeader>
         <TableBody>
           {notes.map((note, i) => (
-            <TableRow key={`note-${i}`}><TableCell>{note}</TableCell></TableRow>
+            <TableRow key={`note-${i}`}>
+              <TableCell>{note}</TableCell>
+            </TableRow>
           ))}
         </TableBody>
       </Table>
@@ -60,63 +75,57 @@ const Content = ({ type, project }) => {
   const displayLinks = links =>
     Object.keys(links).length ? (
       <div id='project-links'>
-        <h3>Links</h3>
-        <ul>
+        <h3 className='text-center'>Links</h3>
+        <div className='flex gap-4 align-center justify-center my-4'>
           {links.live && (
-            <li>
-              <a
-                href={links.live}
-                target='_blank'
-                rel='noreferrer'
-                aria-label={`Visit a live demo of this project`}
-              >
-                live link
-              </a>
-            </li>
+            <a
+              href={links.live}
+              target='_blank'
+              rel='noreferrer'
+              aria-label={`Visit a live demo of this project`}
+            >
+              <Button variant='outline'>live link</Button>
+            </a>
           )}
-          {links.live && links.repo && <li>·</li>}
           {links.repo && (
-            <li>
-              <a
-                href={links.repo}
-                target='_blank'
-                rel='noreferrer'
-                aria-label={`See the github repo for this project`}
-              >
-                code repo
-              </a>
-            </li>
+            <a
+              href={links.repo}
+              target='_blank'
+              rel='noreferrer'
+              aria-label={`See the github repo for this project`}
+            >
+              <Button variant='outline'>code repo</Button>
+            </a>
           )}
-        </ul>
+        </div>
       </div>
     ) : (
       <></>
     );
 
   const displayContributor = contributor => {
-    if (!co_contributors[contributor]) return <li>{contributor}</li>;
+    if (!co_contributors[contributor])
+      return <Badge variant='outline'>{contributor}</Badge>;
     const github = `https://github.com/${co_contributors[contributor]}`;
     return (
-      <li>
-        <a
-          href={github}
-          target='_blank'
-          rel='noreferrer'
-          aria-label={`Visit ${contributor}'s GitHub profile`}
-        >
-          {contributor}
-        </a>
-      </li>
+      <a
+        href={github}
+        target='_blank'
+        rel='noreferrer'
+        aria-label={`Visit ${contributor}'s GitHub profile`}
+      >
+        <Badge variant='secondary'>{contributor}</Badge>
+      </a>
     );
   };
 
   const displayContributors = contributors =>
     contributors.length ? (
       <div id='project-contributors'>
-        <h3>Contributors</h3>
-        <ul>
+        <h3 className='text-center'>Co-Contributors</h3>
+        <div className='flex flex-wrap items-center justify-center gap-2 my-4'>
           {contributors.map(contributor => displayContributor(contributor))}
-        </ul>
+        </div>
       </div>
     ) : (
       <></>
@@ -124,43 +133,51 @@ const Content = ({ type, project }) => {
 
   return type === 'dialog' ? (
     <div>
-      <DialogContent className='sm:max-w-[425px]'>
+      <DialogContent className='sm:max-w-[525px] h-[90%]'>
         <DialogHeader className='space-y-4 p-4'>
           <DialogTitle className='text-center'>{title}</DialogTitle>
-          <DialogDescription>{description}</DialogDescription>
         </DialogHeader>
-        <Img imgName={short} folder='projects' type='gif' />
-        <ScrollArea>
-        {/* {tech && displayTech(tech)} */}
-        {notes && displayNotes(notes)}
-        {links && displayLinks(links)}
-        {contributors && displayContributors(contributors)}</ScrollArea>
+        <Separator />
+        <ScrollArea
+          orientation='vertical'
+          className='w-full px-4 overflow-y-auto'
+        >
+          <DialogDescription className='my-2'>{description}</DialogDescription>
+          <Img imgName={short} folder='projects' type='gif' />
+
+          {/* {tech && displayTech(tech)} */}
+          {notes && displayNotes(notes)}
+          {links && displayLinks(links)}
+          {contributors && displayContributors(contributors)}
+        </ScrollArea>
       </DialogContent>
     </div>
   ) : (
     <>
-      <DrawerContent className="h-screen">
+      <DrawerContent className='h-screen'>
         <DrawerHeader className='text-left space-y-4 p-4'>
           <DrawerTitle className='text-center'>{title}</DrawerTitle>
         </DrawerHeader>
-        <Separator/>
-        <ScrollArea orientation="vertical" className="h-max w-full overflow-y-auto px-4">
-        <DrawerDescription>{description}</DrawerDescription>
-        <Img imgName={short} folder='projects' type='gif' />
+        <Separator />
+        <ScrollArea
+          orientation='vertical'
+          className='h-full overflow-y-auto w-full px-4'
+        >
+          <DrawerDescription className='my-4'>{description}</DrawerDescription>
+          <Img imgName={short} folder='projects' type='gif' />
 
-        {/* {tech && displayTech(tech)} */}
-        {notes && displayNotes(notes)}
-        {links && displayLinks(links)}
-        {contributors && displayContributors(contributors)}
+          {/* {tech && displayTech(tech)} */}
+          {notes && displayNotes(notes)}
+          {links && displayLinks(links)}
+          {contributors && displayContributors(contributors)}
         </ScrollArea>
-        <Separator/>
+        <Separator />
         <DrawerFooter className='pt-2'>
           <DrawerClose asChild>
             <Button variant='outline'>Close</Button>
           </DrawerClose>
         </DrawerFooter>
-
-        </DrawerContent>
+      </DrawerContent>
     </>
   );
 };

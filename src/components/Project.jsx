@@ -15,6 +15,7 @@ const badgeURL = 'https://img.shields.io/badge/';
 
 const Project = ({ project, handleClick }) => {
   const { title, description, tech } = project;
+  console.log(project.title, description.length);
   return (
     <motion.div
       className='w-[min(250px,90vw)] aspect-[2/3] group hover:cursor-pointer'
@@ -25,26 +26,30 @@ const Project = ({ project, handleClick }) => {
       aria-label={`More info about ${project} project`}
     >
       <Card className='w-full h-full relative'>
-        <CardHeader>
+        <CardHeader className='h-1/5'>
           <CardTitle>{title}</CardTitle>
-          <CardDescription className='line-clamp-3'>
-            {description}
-          </CardDescription>
         </CardHeader>
         <Separator />
-        <CardFooter className='h-2/3 w-full flex flex-wrap items-center justify-center gap-4 p-4'>
-          {tech.map((type, idx) =>
-            badges[type] ? (
-              <img
-                className='opacity-70 group-hover:opacity-100'
-                src={`${badgeURL}${badges[type]}`}
-                alt={`${type} logo badge`}
-                key={`project_${title}_${idx}`}
-              />
-            ) : (
-              ''
-            )
-          )}
+        <CardDescription className='h-1/4 p-4 border-box !line-clamp-4 overflow-hidden align-baseline text-wrap truncate'>
+          {/* {description.length > 100 ? description.slice(0,  100) + '...' : description} */}
+          {description}
+        </CardDescription>
+        <Separator className="mt-4"/>
+        <CardFooter className='w-full'>
+          <div className='w-full flex flex-wrap !items-center justify-center gap-4 p-4 border-box overflow-hidden'>
+            {tech.map((type, idx) =>
+              badges[type] ? (
+                <img
+                  className='opacity-70 group-hover:opacity-100'
+                  src={`${badgeURL}${badges[type]}`}
+                  alt={`${type} logo badge`}
+                  key={`project_${title}_${idx}`}
+                />
+              ) : (
+                ''
+              )
+            )}
+          </div>
         </CardFooter>
       </Card>
     </motion.div>
