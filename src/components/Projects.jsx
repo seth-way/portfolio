@@ -47,9 +47,6 @@ const Projects = () => {
     setOpen(true);
   };
 
-  const { title, short, description, contributors, tech, notes, links } =
-    currentProject;
-
   return (
     <Card
       id='projects'
@@ -70,7 +67,7 @@ const Projects = () => {
           <Content type='dialog' project={currentProject} />
         </Dialog>
       ) : (
-        <Drawer open={open} onOpenChange={setOpen}>
+        <Drawer open={open} onOpenChange={setOpen} modal={true}>
           <h2 className='uppercase'>Projects</h2>
           <div className='flex flex-wrap align-center justify-center gap-4'>
             {projects.map((project, idx) => (
@@ -81,7 +78,7 @@ const Projects = () => {
               />
             ))}
           </div>
-          <Content type='drawer' project={currentProject} />
+          <Content type='drawer' project={currentProject} modal={true}/>
         </Drawer>
       )}
     </Card>
