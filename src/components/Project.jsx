@@ -15,7 +15,7 @@ const badgeURL = 'https://img.shields.io/badge/';
 
 const Project = ({ project, handleClick }) => {
   const { title, description, tech } = project;
-  console.log(project.title, description.length);
+
   return (
     <motion.div
       className='w-[min(250px,90vw)] aspect-[2/3] group hover:cursor-pointer'

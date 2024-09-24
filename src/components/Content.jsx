@@ -31,7 +31,7 @@ import co_contributors from '@/assets/resume-info/co_contributors.json';
 const Content = ({ type, project }) => {
   const { title, short, description, contributors, tech, notes, links } =
     project;
-  console.log('ccccc', co_contributors);
+
   const displayTech = tech =>
     tech.length ? (
       <div id='project-tech'>

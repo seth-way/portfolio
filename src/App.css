@@ -9,6 +9,22 @@
   align-items: center;
   gap: 1rem;
 
+  #headline-svg {
+    text {
+      font-family: 'Bitter', serif;
+    }
+
+    .top-txt {
+    }
+
+    .bottom-txt {
+      border: thin solid pink;
+      color: green;
+      height: 50%;
+      overflow: hidden;
+    }
+  }
+
   .section-card {
     width: min(1280px, 95vw);
 
