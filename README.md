@@ -29,7 +29,6 @@ This app is meant to help any developer easily showcase their work.
 - Use the `npm install` command to install the project dependencies.
 - Use the `npm run dev` command to run a preview version of the app.
 - Check the console for the `PORT` & copy/paste `localhost:PORT` into your web browser.
-- If you would like to work with your own version of the API, fork [this repo](https://github.com/seth-way/degs-o-kev-bacon-api) & follow the instructions in the README.
 
 ## Customization:
 - To personalize this app's content for yourself, replace the info in `src/assets/resume-info/`.
@@ -38,6 +37,10 @@ This app is meant to help any developer easily showcase their work.
   - Their basename should share the `"short"` attribute from the project's info in `src/assets/resume-info/projects`.
 - To create new tech badges, add them to `src/assets/resume-info/badges.json`.
   - I only used badges from this [site](https://dev.to/envoy_/150-badges-for-github-pnk). If you use your own, it may require a small refactor.
+ 
+## Deploy:
+- This app is built for a hassle-free [Vercel](https://vercel.com/) deployment. Their platform is free & doesn't require card information.
+- Simply make an account, grant access to your forked repo, and create a new deployment.
 
 ## Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
