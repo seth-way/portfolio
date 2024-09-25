@@ -64,7 +64,7 @@ const About = () => {
               onClick={handleClick}
             >
               {phone}
-              <ClipboardCopy className='text-transparent group-hover:text-foreground' />
+              <ClipboardCopy className='text-transparent group-hover:text-primary_C' />
             </Button>
           </p>
           <p>
@@ -81,7 +81,7 @@ const About = () => {
               onClick={handleClick}
             >
               {email}
-              <ClipboardCopy className='text-transparent group-hover:text-foreground' />
+              <ClipboardCopy className='text-transparent group-hover:text-primary_C' />
             </Button>
           </p>
         </section>

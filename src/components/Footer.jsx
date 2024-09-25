@@ -12,8 +12,8 @@ const Footer = () => {
         Thanks so much for checkout out my site! Reach out & let's build
         something interesting.
       </p>
-      <Button variant='outline' onClick={handleClick}>
-        <ArrowUp />
+      <Button variant='outline' onClick={handleClick} className='group'>
+        <ArrowUp className='group-hover:text-primary_C' />
         &nbsp;Home
       </Button>
     </footer>
