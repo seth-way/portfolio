@@ -35,12 +35,12 @@ const Project = ({ project, handleClick }) => {
           {description}
         </CardDescription>
         <Separator className="mt-4"/>
-        <CardFooter className='w-full'>
-          <div className='w-full flex flex-wrap !items-center justify-center gap-4 p-4 border-box overflow-hidden'>
+        <CardFooter className='w-full h-[55%]'>
+          <div className='w-full flex flex-wrap items-center justify-center gap-2 p-2 border-box overflow-hidden'>
             {tech.map((type, idx) =>
               badges[type] ? (
                 <img
-                  className='opacity-70 group-hover:opacity-100'
+                  className='opacity-70 group-hover:opacity-100 max-w-[46%]'
                   src={`${badgeURL}${badges[type]}`}
                   alt={`${type} logo badge`}
                   key={`project_${title}_${idx}`}

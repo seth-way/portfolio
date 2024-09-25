@@ -28,7 +28,7 @@ const About = () => {
     }
   }, []);
 
-  const handleClick = (e) => {
+  const handleClick = e => {
     navigator.clipboard.writeText(e.currentTarget.innerText);
     e.currentTarget.focus();
   };
@@ -44,7 +44,7 @@ const About = () => {
           id='profile-pic-border'
           className='w-[min(50vh,50vw)] min-w-124 max-w-80'
         >
-          <img id="profile-pic" src={headShot} alt='profile headshot of dev'/>
+          <img id='profile-pic' src={headShot} alt='profile headshot of dev' />
         </div>
         <section className='flex flex-col items-center'>
           <h2 className='mb-4'>About Me</h2>
@@ -52,8 +52,10 @@ const About = () => {
         </section>
       </div>
       <div className='flex flex-col md:flex-row items-center gap-8'>
-        <section className="flex flex-col items-center">
-          <h3 className='mb-4 font-bold text-xl text-center text-nowrap w-fit'>Contact Details</h3>
+        <section className='flex flex-col text-md md:text-base items-center'>
+          <h3 className='mb-4 font-bold text-xl text-center text-nowrap w-fit'>
+            Contact Details
+          </h3>
           <p className='ms-12'>
             phone:{' '}
             <Button
@@ -71,7 +73,7 @@ const About = () => {
               {city}, {state}
             </b>
           </p>
-          <p className='ms-12'>
+          <p className='ms-12 text-nowrap'>
             email:{' '}
             <Button
               className='group inline-flex gap-4'

@@ -63,7 +63,7 @@ const Content = ({ type, project }) => {
         <TableBody>
           {notes.map((note, i) => (
             <TableRow key={`note-${i}`}>
-              <TableCell>{note}</TableCell>
+              <TableCell>&#183; {note}</TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -143,7 +143,9 @@ const Content = ({ type, project }) => {
           className='w-full px-4 overflow-y-auto'
         >
           <DialogDescription className='my-2'>{description}</DialogDescription>
-          <Img imgName={short} folder='projects' type='gif' />
+          <div className='w-full flex justify-center'>
+            <Img imgName={short} folder='projects' type='gif' />
+          </div>
 
           {/* {tech && displayTech(tech)} */}
           {notes && displayNotes(notes)}
@@ -164,7 +166,9 @@ const Content = ({ type, project }) => {
           className='h-full overflow-y-auto w-full px-4'
         >
           <DrawerDescription className='my-4'>{description}</DrawerDescription>
-          <Img imgName={short} folder='projects' type='gif' />
+          <div className='w-full flex justify-center'>
+            <Img imgName={short} folder='projects' type='gif' />
+          </div>
 
           {/* {tech && displayTech(tech)} */}
           {notes && displayNotes(notes)}
