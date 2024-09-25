@@ -91,9 +91,12 @@ const About = () => {
             download
             aria-label={`Download ${fullName}'s resume`}
           >
-            <Button variant='outline' className='w-full h-full text-primary'>
-              <File className='text-primary' />
-              Download Resume
+            <Button
+              variant='outline'
+              className='w-full h-full text-primary group'
+            >
+              <File className='group-hover:text-primary_C' />
+              &nbsp;Download Resume
             </Button>
           </a>
         </section>
