@@ -37,6 +37,7 @@ This app is meant to help any developer easily showcase their work.
   - Their basename should share the `"short"` attribute from the project's info in `src/assets/resume-info/projects`.
 - To create new tech badges, add them to `src/assets/resume-info/badges.json`.
   - I only used badges from this [site](https://dev.to/envoy_/150-badges-for-github-pnk). If you use your own, it may require a small refactor.
+- Add your own headshot & save it at `src/images/headShot.jpg`.
  
 ## Deploy:
 - This app is built for a hassle-free [Vercel](https://vercel.com/) deployment. Their platform is free & doesn't require card information.
