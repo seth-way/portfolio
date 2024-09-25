@@ -21,7 +21,7 @@ export default function Home() {
       className='section-card relative h-[98vh] flex flex-col items-center justify-center overflow-hidden gap-4  z-10'
     >
       <Headline firstName={firstName} />
-      <p className='m-0 -mt-8 lowercase'>{role}.</p>
+      <p className='m-0 lowercase'>{role}.</p>
       <div
         id='social-links'
         className='min-h-4 max-h-8 h-[5vw] flex items-center gap-4 z-20'
