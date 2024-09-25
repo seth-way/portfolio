@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 
-const textColors = ['primary_C', '[#808080]', 'text'];
+const textColors = ['text-primary_C', 'text-gray-500', 'text-text'];
 
-const getTextColor = (idx) => textColors[idx % textColors.length];
+const getTextColor = idx => textColors[idx % textColors.length];
 
-const getLevelStyle = (value) => {
+const getLevelStyle = value => {
   if (value < 30) return { fontSize: 'clamp(0.8rem, 2vw, 1rem)' };
   if (value < 50) return { fontSize: 'clamp(1.2rem, 2.5vw, 1.7rem)' };
   if (value < 70) return { fontSize: 'clamp(1.6em, 3vw, 2.3rem)' };
@@ -16,7 +16,7 @@ const SkillText = ({ skillInfo, idx }) => {
   const { skill, value } = skillInfo;
 
   const color = getTextColor(idx);
-  const classStyle = 'text-' + color;
+  const classStyle = color;
   const levelStyle = getLevelStyle(value);
   const style = { color: color, ...levelStyle };
 

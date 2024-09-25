@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className='w-full border-t flex flex-col sm:flex-row flex-no-wrap gap-4 items-center justify-center p-4'>
       <p>
-        Thanks so much for checkout out my site! Reach out & let's build
+        Thanks so much for checking out my site! Reach out & let's build
         something interesting.
       </p>
       <Button variant='outline' onClick={handleClick} className='group'>

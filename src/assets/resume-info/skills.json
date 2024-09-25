@@ -1,17 +1,18 @@
 [
-  { "skill": "JavaScript (ES6+)", "value": 90 },
-  { "skill": "C#", "value": 25 },
-  { "skill": "Python", "value": 20 },
-  { "skill": "CSS", "value": 50 },
   { "skill": "ReactJS", "value": 85 },
-  { "skill": "ExpressJS", "value": 80 },
-  { "skill": "SQL", "value": 20 },
+  { "skill": "TypeScript", "value": 30 },
+  { "skill": "JavaScript (ES6+)", "value": 90 },
+  { "skill": "React Hooks", "value": 80 },
+  { "skill": "React-Router", "value": 80 },
+  { "skill": "CSS", "value": 50 },
   { "skill": "HTML", "value": 50 },
   { "skill": "Git", "value": 60 },
+  { "skill": "ExpressJS", "value": 80 },
+  { "skill": "TailwindCSS", "value": 30 },
+  { "skill": "C#", "value": 25 },
+  { "skill": "Python", "value": 20 },
+  { "skill": "SQL", "value": 20 },
   { "skill": "Vercel", "value": 50 },
   { "skill": "Node.js", "value": 80 },
-  { "skill": "zustand", "value": 50 },
-  { "skill": "React Hooks", "value": 80 },
-  { "skill": "TypeScript", "value": 30 },
-  { "skill": "TailwindCSS", "value": 30 }
+  { "skill": "zustand", "value": 50 }
 ]
