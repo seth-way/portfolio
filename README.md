@@ -10,7 +10,7 @@
 [//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
 This app is meant to help any developer easily showcase their work.
 
-## Preview of App:
+## Preview:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
 <div align="center">
   <img src="/src/assets/images/site-nav.gif" alt="preview of app navigation" width="400px" height="auto">
@@ -31,7 +31,7 @@ This app is meant to help any developer easily showcase their work.
 - Check the console for the `PORT` & copy/paste `localhost:PORT` into your web browser.
 - If you would like to work with your own version of the API, fork [this repo](https://github.com/seth-way/degs-o-kev-bacon-api) & follow the instructions in the README.
 
-## Customize for You!
+## Customization:
 - To personalize this app's content for yourself, replace the info in `src/assets/resume-info/`.
 - Be sure to maintain the json's format white editting.
 - All project preview GIFs should be placed in `src/assets/images/projects/`
