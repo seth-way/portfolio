@@ -1,5 +1,37 @@
 [
   {
+    "title": "6° of Kevin Bacon",
+    "short": "bacon",
+    "description": "This app is a sleek UI built using React & designed to challenge users on their knowledge of movie trivia. Using an input device or a touchscreen, a user can drag and drop movies or movie stars while trying to create a valid puzzle. A puzzle is only valid if a star is between 2 movies they starred in vice versa.",
+    "contributors": [],
+    "tech": ["react", "react-router", "vite", "cypress", "javascript", "framer", "express", "node"],
+    "notes": [
+      "The game ties together several new concepts I wasn't sure I could pull off. My idea required using a drag-n-drop interface, creating SVG paths to clip images to various shapes & using framer-motion to create smooth animations. All these new concepts came together nicely & I'm happy with the final UI.",
+      "The app's various pieces of state became cumbersome to work with & so I made a decision to refactor all state to use a ZuStand store. It took time away from developing new features, but overall it was worth it. After the refactor, managing state became much more cut & dry. Most importantly, I was able to work with a useful new library in the process.",
+      "The DnD-Kit Library comes with several useful new hooks. However, my use case was unique and so finding relevant examples was an issue. It required patience, trial & error & lots of debugging to integrate into my app.",
+      "Cypress's drag-n-drop tools did not natively work with my chosen library, so that also took some research. I was able to find a useful 3rd party library that made it possible to use DnD-Kit with Cypress's testing suite."
+    ],
+    "links": {
+      "repo": "https://github.com/seth-way/degs-o-kev-bacon",
+      "live": "https://degs-o-kev-bacon.vercel.app/"
+    }
+  },
+  {
+    "title": "Dangol'Weather",
+    "short": "weather",
+    "description": "A local weather app that utilizes both the OpenWeatherMap & Google Maps auto-complete APIs. A user can input any US city and get the local weather, along with a 5-day forecast and a King of the Hill's - Boomhauer - inspired, quote that is tonally related to the state of the returned local weather.",
+    "contributors": ["Zelalem Fitru", "Ryan O'Leary", "Robert Phillips"],
+    "tech": ["typescript", "react", "react-router", "vite", "cypress", "tailwind", "framer", "webpack"],
+    "notes": [
+      "We handled allowing a user to select any US location by integrating Google's 'Location' & 'AutoComplete' api's.",
+      "While navigating a fairly wide range of new technologies, we were successful in remaining committed to the design and functional minimalism that defined our initial vision for the application."
+    ],
+    "links": {
+      "repo": "https://github.com/seth-way/dangol-weather?tab=readme-ov-file",
+      "live": "https://dangol-weather.vercel.app/"
+    }
+  },
+  {
     "title": "Overlook Hotel",
     "short": "overlook",
     "description": "A hotel management tool for hotel customers to manage room bookings and calculate bills.",

@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
+import Headline from './Headline';
 import HexBG from './HexBG';
-import {
-  Card,
-} from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 
 import gitHubLogo from '../assets/images/github.svg';
 import linkedinLogo from '../assets/images/linkedin.svg';
@@ -21,13 +20,8 @@ export default function Home() {
       id='home'
       className='section-card relative h-[98vh] flex flex-col items-center justify-center overflow-hidden gap-4  z-10'
     >
-      <h1
-        className='uppercase relative gap-4 bg-background'
-        data-name={firstName}
-      >
-        {firstName}
-      </h1>
-      <p className='m-0 -mt-2 lowercase'>{role}.</p>
+      <Headline firstName={firstName} />
+      <p className='m-0 lowercase'>{role}.</p>
       <div
         id='social-links'
         className='min-h-4 max-h-8 h-[5vw] flex items-center gap-4 z-20'

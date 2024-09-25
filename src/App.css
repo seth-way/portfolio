@@ -9,6 +9,61 @@
   align-items: center;
   gap: 1rem;
 
+  #headline {
+    h1 {
+      font-family: 'Bitter', serif;
+      span {
+        top: 0;
+        transform: skew(-20deg, 0);
+        overflow: hidden;
+        font-weight: 700;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .top-only {
+        left: 0;
+        top: -5px;
+        height: 50%;
+        color: hsl(var(--text));
+        z-index: 5;
+      }
+
+      .bottom-only {
+        left: 5px;
+        top: 5px;
+        color: gray;
+      }
+
+      .bottom-only:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: attr(data-content);
+        color: hsl(var(--background));
+        height: 50%;
+        overflow: hidden;
+        font-weight: 900;
+      }
+    }
+
+    svg {
+      transition: transform 0.4s ease-in-out;
+    }
+  }
+
+  #headline:hover {
+    span {
+      transform: skew(0,0) !important;
+      top: 0;
+      left: 0;
+      color: hsl(var(--foreground));
+    }
+    svg {
+      transform: scaleX(0);
+    }
+  }
+
+
   .section-card {
     width: min(1280px, 95vw);
 
