@@ -39,6 +39,7 @@ This app is meant to help any developer easily showcase their work.
   - I only used badges from this [site](https://dev.to/envoy_/150-badges-for-github-pnk). If you use your own, it may require a small refactor.
 - Add your own headshot & save it at `src/assets/images/headShot.jpg`.
 - Save the most recent version of your resume at `src/assets/resume.pdf`.
+- If you use this app, I'd love to hear about it! Give me a shoutout on linkedin & a star on github.
  
 ## Deploy:
 - This app is built for a hassle-free [Vercel](https://vercel.com/) deployment. Their platform is free & doesn't require card information.
