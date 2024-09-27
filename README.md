@@ -60,3 +60,10 @@ This app was a concept created, built & deployed by <a href="https://github.com/
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
   <img src="https://img.shields.io/badge/Vite-646CFF.svg?style=for-the-badge&logo=Vite&logoColor=white" />
 </p>
+
+## What's Next:
+- The Dark/Light Mode Toggle should be linked to local storage to persist a user's choice on app reload.
+- Accessibility should be checked/rechecked so that all possible updates are incorporated.
+- A section for education/work history should be considered.
+- A banner for 'fun facts' could be added for a more personal feel.
+- A contact me form could be incororated? (This might require a 3rd party subscription)
