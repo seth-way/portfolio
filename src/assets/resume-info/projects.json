@@ -21,7 +21,7 @@
     "short": "weather",
     "description": "A local weather app that utilizes both the OpenWeatherMap & Google Maps auto-complete APIs. A user can input any US city and get the local weather, along with a 5-day forecast and a King of the Hill's - Boomhauer - inspired, quote that is tonally related to the state of the returned local weather.",
     "contributors": ["Zelalem Fitru", "Ryan O'Leary", "Robert Phillips"],
-    "tech": ["typescript", "react", "react-router", "vite", "cypress", "tailwind", "framer", "webpack"],
+    "tech": ["typescript", "react", "react-router", "vite", "cypress", "tailwind", "framer"],
     "notes": [
       "We handled allowing a user to select any US location by integrating Google's 'Location' & 'AutoComplete' api's.",
       "While navigating a fairly wide range of new technologies, we were successful in remaining committed to the design and functional minimalism that defined our initial vision for the application."
@@ -29,6 +29,21 @@
     "links": {
       "repo": "https://github.com/seth-way/dangol-weather?tab=readme-ov-file",
       "live": "https://dangol-weather.vercel.app/"
+    }
+  },
+  {
+    "title": "Tainted Turnips",
+    "short": "turnips",
+    "description": "A react-based, movie app that allows users to view, filter and discover movie titles all through a sleek and responsive UI.",
+    "contributors": "Marshall Hotaling",
+    "tech": ["react", "react-router", "cypress", "javascript"],
+    "notes": [
+      "When trying to deploy this site to GitHub pages, it did not work well with the BrowserRouter we used for page navigation. After thorough research, we refactored our router to use a HashRouter and were able to successfully deploy a working version of our app.",
+      "This app was our first introduction to working with Cypress's testing suite. It is a robust and powerful library but it can be challenging to maneuver initially. We were able to successfully test and validate our entire app's UI, as well as any sad paths that could happen due to possible network errors."
+    ],
+    "links": {
+      "repo": "https://github.com/seth-way/tainted-turnips",
+      "live": "https://seth-way.github.io/tainted-turnips/#/"
     }
   },
   {
