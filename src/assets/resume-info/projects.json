@@ -35,7 +35,7 @@
     "title": "Tainted Turnips",
     "short": "turnips",
     "description": "A react-based, movie app that allows users to view, filter and discover movie titles all through a sleek and responsive UI.",
-    "contributors": "Marshall Hotaling",
+    "contributors": ["Marshall Hotaling"],
     "tech": ["react", "react-router", "cypress", "javascript"],
     "notes": [
       "When trying to deploy this site to GitHub pages, it did not work well with the BrowserRouter we used for page navigation. After thorough research, we refactored our router to use a HashRouter and were able to successfully deploy a working version of our app.",
