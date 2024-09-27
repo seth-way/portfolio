@@ -67,3 +67,5 @@ This app was a concept created, built & deployed by <a href="https://github.com/
 - A section for education/work history should be considered.
 - A banner for 'fun facts' could be added for a more personal feel.
 - A contact me form could be incororated? (This might require a 3rd party subscription)
+
+Note: Any additional features should fit the overall design aesthetic and continue to incororate [shadcn](https://ui.shadcn.com/) components if possible.
