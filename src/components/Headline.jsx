@@ -1,48 +1,21 @@
-import { motion } from "framer-motion";
-
 const Headline = ({ firstName }) => {
 
   return (
     <div id="headline" className="flex items-center justify-center font-bold">
-      <h1 className="uppercase text-6xl md:text-8xl tracking-wide relative">
-        <span className="skew-x-[-20deg] opacity-0">{firstName}</span>
-        <span className="absolute top-only">{firstName}</span>
-        <span data-content={firstName} className="absolute bottom-only">{firstName}</span>
-      </h1>
-      <svg
-        id="headline-svg"
-        viewBox="0 0 100 40"
+      <svg 
+      id="headline-svg"
+        viewBox="0 0 800 100"
         xmlns="http://www.w3.org/2000/svg"
-        role="img"
-        width="500px"
-        height="125px"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
-        className="absolute"
-      >
-        <motion.ellipse
-          cx="5"
-          cy="20"
-          rx="3.5"
-          ry="1.1"
-          fill="var(--primary_C)"
-        />
-        <motion.rect
-          x="5"
-          y="19"
-          width="90"
-          height="2"
-          fill="var(--primary_C)"
-        />
-        <motion.ellipse
-          cx="95"
-          cy="20"
-          rx="3.5"
-          ry="1.1"
-          fill="var(--primary_C)"
-        />
-      </svg>
+        stroke="hsl(var(--foreground))"
+        strokeWidth="2"
+        className="text-line">
+          <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="40%" stop-color="hsl(var(--muted-foreground))" />
+            <stop offset="90%" stop-color="var(--primary_C)" />
+            <stop offset="100%" stop-color="var(--primary_C)" />
+          </linearGradient>
+          <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fontSize = "99" fill="url(#Gradient1)">{firstName}</text>
+        </svg>
     </div>
   );
 };
