@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import Headline from './Headline';
-import HexBG from './HexBG';
+import Headline from '@/components/Headline';
+import HexBG from '@/components/HexBG';
 import { Card } from '@/components/ui/card';
 
 import gitHubLogo from '../assets/images/github.svg';
