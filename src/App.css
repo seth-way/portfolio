@@ -21,8 +21,8 @@
 				text-transform: uppercase;
 				stroke-dasharray: 500;
 				stroke-dashoffset: 500;
-				-webkit-animation: dash 4s linear forwards, filling 3s ease-in forwards;
-				animation: dash 4s linear forwards, filling 3s ease-in forwards;
+				-webkit-animation: draw 4s linear forwards;
+				animation: draw 4s linear forwards;
 			}
 		}
 	}
@@ -123,17 +123,13 @@
 	}
 }
 
-@keyframes filling {
-	from {
+@keyframes draw {
+	0% {
 		fill-opacity: 0;
+		stroke-dashoffset: 500;
 	}
-	to {
-		fill-opacity: 1;
-	}
-}
-
-@keyframes dash {
-	to {
+	100% {
 		stroke-dashoffset: 0;
+		fill-opacity: 1;
 	}
 }
