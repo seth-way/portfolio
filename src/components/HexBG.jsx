@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useWindowSize } from '@react-hook/window-size/throttled';
-import Hex from './Hex';
+import Hex from '@/components/Hex';
 
 export default function HexBG() {
   const [width, height] = useWindowSize();
