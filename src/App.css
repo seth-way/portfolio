@@ -9,21 +9,19 @@
 	align-items: center;
 	gap: 1rem;
 
-	#headline {
-		width: 80%;
-		height: auto;
+	#headline-svg {
 		z-index: 4;
-
-		#headline-svg {
-			/* font-family: 'Plaster', georgia, times, serif; */
-			font-weight: 800;
-			text {
-				text-transform: uppercase;
-				/* stroke-dasharray: 500;
+		font-family: 'Plaster', georgia, times, serif;
+    transform: scaleX(0.9);
+		text {
+			text-transform: uppercase;
+      font-stretch: 10%;
+      font-weight: 800;
+      
+			/* stroke-dasharray: 500;
 				stroke-dashoffset: 500;
 				-webkit-animation: draw 4s linear forwards;
 				animation: draw 4s linear forwards; */
-			}
 		}
 	}
 
@@ -59,7 +57,6 @@
 			border-radius: 999px;
 			width: 100%;
 			aspect-ratio: 1 / 1;
-			/* width: auto; */
 		}
 
 		#profile-pic-border {
