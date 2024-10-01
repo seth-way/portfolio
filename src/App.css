@@ -15,7 +15,7 @@
 		z-index: 4;
 
 		#headline-svg {
-			font-family: 'Plaster', georgia, times, serif;
+			/* font-family: 'Plaster', georgia, times, serif; */
 			font-weight: 800;
 			text {
 				text-transform: uppercase;
