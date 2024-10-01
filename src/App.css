@@ -19,10 +19,10 @@
 			font-weight: 800;
 			text {
 				text-transform: uppercase;
-				stroke-dasharray: 500;
+				/* stroke-dasharray: 500;
 				stroke-dashoffset: 500;
 				-webkit-animation: draw 4s linear forwards;
-				animation: draw 4s linear forwards;
+				animation: draw 4s linear forwards; */
 			}
 		}
 	}
