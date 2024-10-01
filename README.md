@@ -13,7 +13,7 @@ This app is meant to help any developer easily showcase their work.
 ## Preview:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
 <div align="center">
-  <img src="/src/assets/images/site-nav.gif" alt="preview of app navigation" width="400px" height="auto">
+  <img src="/src/assets/images/site-nav.gif" alt="preview of app navigation" width="500px" height="auto">
 </div>
 
 ## Installation Instructions:
@@ -35,6 +35,7 @@ This app is meant to help any developer easily showcase their work.
 - Be sure to maintain the json's format white editting.
 - All project preview GIFs should be placed in `src/assets/images/projects/`
   - Their basename should share the `"short"` attribute from the project's info in `src/assets/resume-info/projects`.
+  - example → a gif for a project with the attribute `"short":"spaceship"` would be saved as `src/assets/images/projects/spaceship.gif`
 - To create new tech badges, add them to `src/assets/resume-info/badges.json`.
   - I only used badges from this [site](https://dev.to/envoy_/150-badges-for-github-pnk). If you use your own, it may require a small refactor.
 - Add your own headshot & save it at `src/assets/images/headShot.jpg`.
