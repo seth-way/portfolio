@@ -16,11 +16,11 @@ const Headline = ({ firstName }) => {
             <stop offset="100%" stop-color="var(--primary_C)" />
           </linearGradient> */}
 				<text
-					x="50%"
-					y="50%"
-					dominantBaseline="middle"
-					textAnchor="middle"
-					fontSize="99"
+					// x="50%"
+					y="99%"
+					// dominantBaseline="middle"
+					// textAnchor="middle"
+					fontSize="95"
 					fill="white">
 					{firstName}
 				</text>
