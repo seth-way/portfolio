@@ -2,13 +2,13 @@
   {
     "title": "6° of Kevin Bacon",
     "short": "bacon",
-    "description": "This app is a sleek UI built using React & designed to challenge users on their knowledge of movie trivia. Using an input device or a touchscreen, a user can drag and drop movies or movie stars while trying to create a valid puzzle. A puzzle is only valid if a star is between 2 movies they starred in vice versa.",
+    "description": "A sleek UI built using React & designed to challenge users on their knowledge of movie trivia. Using an input device or a touchscreen, a user can drag & drop movies or movie stars while trying to create a valid puzzle. A puzzle is only valid if a star is between 2 movies they starred in vice versa.",
     "contributors": [],
     "tech": ["react", "react-router", "vite", "cypress", "javascript", "framer", "express", "node"],
     "notes": [
       "The game ties together several new concepts I wasn't sure I could pull off. My idea required using a drag-n-drop interface, creating SVG paths to clip images to various shapes & using framer-motion to create smooth animations. All these new concepts came together nicely & I'm happy with the final UI.",
       "The app's various pieces of state became cumbersome to work with & so I made a decision to refactor all state to use a ZuStand store. It took time away from developing new features, but overall it was worth it. After the refactor, managing state became much more cut & dry. Most importantly, I was able to work with a useful new library in the process.",
-      "The DnD-Kit Library comes with several useful new hooks. However, my use case was unique and so finding relevant examples was an issue. It required patience, trial & error & lots of debugging to integrate into my app.",
+      "The DnD-Kit Library comes with several useful new hooks. However, my use case was unique & so finding relevant examples was an issue. It required patience, trial & error & lots of debugging to integrate into my app.",
       "Cypress's drag-n-drop tools did not natively work with my chosen library, so that also took some research. I was able to find a useful 3rd party library that made it possible to use DnD-Kit with Cypress's testing suite."
     ],
     "links": {
@@ -19,12 +19,12 @@
   {
     "title": "Dangol'Weather",
     "short": "weather",
-    "description": "A local weather app that utilizes both the OpenWeatherMap & Google Maps auto-complete APIs. A user can input any US city and get the local weather, along with a 5-day forecast and a King of the Hill's - Boomhauer - inspired, quote that is tonally related to the state of the returned local weather.",
+    "description": "A local weather app that utilizes both the OpenWeatherMap & Google Maps auto-complete APIs. A user can input any US city & get the local weather, along with a 5-day forecast & a King of the Hill's - Boomhauer - inspired, quote that is tonally related to the state of the returned local weather.",
     "contributors": ["Zelalem Fitru", "Ryan O'Leary", "Robert Phillips"],
     "tech": ["typescript", "react", "react-router", "vite", "cypress", "tailwind", "framer"],
     "notes": [
       "We handled allowing a user to select any US location by integrating Google's 'Location' & 'AutoComplete' api's.",
-      "While navigating a fairly wide range of new technologies, we were successful in remaining committed to the design and functional minimalism that defined our initial vision for the application."
+      "While navigating a fairly wide range of new technologies, we were successful in remaining committed to the design & functional minimalism that defined our initial vision for the application."
     ],
     "links": {
       "repo": "https://github.com/seth-way/dangol-weather?tab=readme-ov-file",
@@ -34,12 +34,12 @@
   {
     "title": "Tainted Turnips",
     "short": "turnips",
-    "description": "A react-based, movie app that allows users to view, filter and discover movie titles all through a sleek and responsive UI.",
+    "description": "A react-based movie app that allows users to view, filter & discover movie titles all through a sleek & responsive UI.",
     "contributors": ["Marshall Hotaling"],
     "tech": ["react", "react-router", "cypress", "javascript"],
     "notes": [
-      "When trying to deploy this site to GitHub pages, it did not work well with the BrowserRouter we used for page navigation. After thorough research, we refactored our router to use a HashRouter and were able to successfully deploy a working version of our app.",
-      "This app was our first introduction to working with Cypress's testing suite. It is a robust and powerful library but it can be challenging to maneuver initially. We were able to successfully test and validate our entire app's UI, as well as any sad paths that could happen due to possible network errors."
+      "When trying to deploy this site to GitHub pages, it did not work well with the BrowserRouter we used for page navigation. After thorough research, we refactored our router to use a HashRouter & were able to successfully deploy a working version of our app.",
+      "This app was our first introduction to working with Cypress's testing suite. It is a robust & powerful library but it can be challenging to maneuver initially. We were able to successfully test & validate our entire app's UI, as well as any sad paths that could happen due to possible network errors."
     ],
     "links": {
       "repo": "https://github.com/seth-way/tainted-turnips",
@@ -49,11 +49,11 @@
   {
     "title": "Overlook Hotel",
     "short": "overlook",
-    "description": "A hotel management tool for hotel customers to manage room bookings and calculate bills.",
+    "description": "A hotel management tool for hotel customers to manage room bookings & calculate bills.",
     "contributors": [],
     "tech": ["javascript", "css", "html", "webpack"],
     "notes": [
-      "In order to deploy this UI to github pages the locally running API also had to be deployed. I worked through this process and tracked my steps in a public gist so that my classmates and myself have access to a working example tutorial.",
+      "In order to deploy this UI to github pages the locally running API also had to be deployed. I worked through this process & tracked my steps in a public gist so that my classmates & I have access to a working example tutorial.",
       "The finished product is not only mobile friendly, but also received a 100 accessibility score from Google Lighthouse."
     ],
     "links": {
@@ -64,11 +64,11 @@
   {
     "title": "What's Cookin'?",
     "short": "cookin",
-    "description": "This app is a recipe tracking / meal planning application that allows users to view recipes they want to cook & plan shopping trips around them. Users can view a list of recipes, filter them by name or tag, & choose recipes to cook.",
+    "description": "A recipe tracking / meal planning application that allows users to view recipes they want to cook & plan shopping trips around them. Users can view a list of recipes, filter them by name or tag & choose recipes to cook.",
     "contributors": ["Carissa Hluchan", "Willem Pol", "Marshall Hotaling"],
     "tech": ["javascript", "css", "html", "webpack"],
     "notes": [
-      "Our app crashed when conflicting merges did not present themselves as 'merge conflicts.' By visitting our commit history and utilizing a staging branch, we were able to introduce and remove all the appropriate code to successfully complete the merge.",
+      "Our app crashed when conflicting merges did not present themselves as 'merge conflicts.' By visiting our commit history & utilizing a staging branch, we were able to introduce & remove all the appropriate code to successfully complete the merge.",
       "The recipe cost slider is a complex UI component made of 2 separate slider inputs. In order to make working with it easier, we used closures so that the cost-slider object had access to all the necessary variables."
     ],
     "links": {
@@ -79,7 +79,7 @@
   {
     "title": "Rock · Paper · Scissors",
     "short": "rps",
-    "description": "This app allows 1 or 2 users to play a fun & interactive game of Rock, Paper, Scissors.",
+    "description": "An interactive & fun game of Rock, Paper, Scissors for 1 to 2 users.",
     "contributors": [],
     "tech": ["javascript", "css", "html"],
     "notes": [
