@@ -1,0 +1,43 @@
+import { useEffect, useRef } from 'react';
+
+const Triangle = ({ width, height }) => {
+  const ref = useRef(null);
+  const delay = Math.floor(Math.random() * 50) / 40;
+  useEffect(() => {
+    if (ref.current) {
+      const { current } = ref;
+      current.style.setProperty('--delay', delay + 's');
+    }
+  }, [width, height, delay]);
+
+  const rotation = [0, 120, 240][Math.floor(Math.random() * 3)];
+
+  return (
+    <svg
+      className='triangle-svg'
+      ref={ref}
+      xmlns='http://www.w3.org/2000/svg'
+      viewBox='0 0 68 68'
+      transform={`rotate(${rotation})`}
+      fill='none'
+      strokeWidth='1'
+      strokeLinecap='round'
+      stroke='currentColor'
+      height={height}
+      width={width}
+    >
+      <line x1='8' y1='49' x2='34' y2='4' />
+      <line x1='14' y1='49' x2='37' y2='9.19' />
+      <line x1='20' y1='49' x2='40' y2='14.38' />
+      <line x1='26' y1='49' x2='43' y2='19.57' />
+      <line x1='32' y1='49' x2='46' y2='24.77' />
+      <line x1='32' y1='49' x2='46' y2='24.77' />
+      <line x1='38' y1='49' x2='49' y2='29.96' />
+      <line x1='44' y1='49' x2='52' y2='35.15' />
+      <line x1='50' y1='49' x2='55' y2='40.34' />
+      <line x1='56' y1='49' x2='58' y2='45.53' />
+    </svg>
+  );
+};
+
+export default Triangle;

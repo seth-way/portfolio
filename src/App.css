@@ -1,136 +1,162 @@
 #root {
-	width: 100vw;
-	margin: 1vh auto 0 auto;
-	padding: 0;
-	text-align: center;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 1rem;
+  width: 100vw;
+  margin: 1vh auto 0 auto;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 
-	#headline-svg {
-		z-index: 4;
-		font-family: 'Plaster', georgia, times, serif;
-		transform: scaleX(0.9);
-		text {
-			text-transform: uppercase;
-			font-stretch: 10%;
-			font-weight: 800;
+  #headline-svg {
+    z-index: 4;
+    font-family: 'Plaster', georgia, times, serif;
+    transform: scaleX(0.9);
+    text {
+      text-transform: uppercase;
+      font-stretch: 10%;
+      font-weight: 800;
 
-			stroke-dasharray: 500;
-			stroke-dashoffset: 500;
-			-webkit-animation: fill 3s linear forwards, draw 4s linear forwards;
-			animation: fill 3s linear forwards, draw 4s linear forwards;
-		}
-	}
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+      -webkit-animation: fill 3s linear forwards, draw 4s linear forwards;
+      animation: fill 3s linear forwards, draw 4s linear forwards;
+    }
+  }
 
-	.section-card {
-		width: min(1280px, 95vw);
+  .section-card {
+    width: min(1280px, 95vw);
 
-		.hex-svg {
-			color: var(--text_C);
-			flex-shrink: 0;
-			transform-box: fill-box;
-			transform-origin: center;
+    .hex-svg,
+    .triangle-svg {
+      color: var(--text_C);
+      flex-shrink: 0;
+      transform-box: fill-box;
+      transform-origin: center;
 
-			> * {
-				opacity: 4%;
-			}
-		}
+      /* > * {
+        opacity: 4%;
+      } */
+    }
 
-		h2 {
-			font-family: 'Rowdies', sans-serif;
-			text-transform: uppercase;
-			font-weight: 900;
-			font-size: 2rem;
-		}
-	}
-
-	#about {
-		--from: 30deg;
-		--pic-border: 0.6em;
-		--distance: 66%;
-
-		#profile-pic {
-			display: block;
-			border-radius: 999px;
-			width: 100%;
+    .triangle-group {
+      border: thin solid pink;
+      position: relative;
+      height: 100%;
 			aspect-ratio: 1 / 1;
-		}
+      & > .triangle-svg {
+        position: absolute;
+      }
 
-		#profile-pic-border {
-			position: relative;
-			width: min(50vh, 60vw);
-			max-width: 350px;
-			aspect-ratio: 1 / 1;
-			padding: 30px;
-		}
+      .triangle-svg:nth-child(1) {
+        left: 0;
+        bottom: 0;
+      }
 
-		#profile-pic-border::after {
-			content: '';
-			border-radius: 999px;
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-			width: 100%;
-			stroke-linecap: round;
-			background: conic-gradient(
-				from var(--from),
-				var(--bg-hex),
-				var(--primary_C) var(--distance),
-				transparent var(--distance)
-			);
-			-webkit-mask: radial-gradient(
-				farthest-side,
-				transparent calc(100% - var(--pic-border)),
-				#fff calc(100% - var(--border) + 1px)
-			);
-			mask: radial-gradient(
-				farthest-side,
-				transparent calc(100% - var(--pic-border)),
-				#fff calc(100% - var(--pic-border) + 1px)
-			);
-		}
-	}
+      .triangle-svg:nth-child(2) {
+        right: 0;
+        bottom: 0;
+      }
+
+      .triangle-svg:nth-child(3) {
+      }
+      .triangle-svg:nth-child(4) {
+      }
+    }
+
+    h2 {
+      font-family: 'Rowdies', sans-serif;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 2rem;
+    }
+  }
+
+  #about {
+    --from: 30deg;
+    --pic-border: 0.6em;
+    --distance: 66%;
+
+    #profile-pic {
+      display: block;
+      border-radius: 999px;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+    }
+
+    #profile-pic-border {
+      position: relative;
+      width: min(50vh, 60vw);
+      max-width: 350px;
+      aspect-ratio: 1 / 1;
+      padding: 30px;
+    }
+
+    #profile-pic-border::after {
+      content: '';
+      border-radius: 999px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      stroke-linecap: round;
+      background: conic-gradient(
+        from var(--from),
+        var(--bg-hex),
+        var(--primary_C) var(--distance),
+        transparent var(--distance)
+      );
+      -webkit-mask: radial-gradient(
+        farthest-side,
+        transparent calc(100% - var(--pic-border)),
+        #fff calc(100% - var(--border) + 1px)
+      );
+      mask: radial-gradient(
+        farthest-side,
+        transparent calc(100% - var(--pic-border)),
+        #fff calc(100% - var(--pic-border) + 1px)
+      );
+    }
+  }
 }
 
 @keyframes fader {
-	0% {
-		opacity: 5%;
-	}
-	100% {
-		opacity: 1%;
-	}
+  0% {
+    opacity: 5%;
+  }
+  100% {
+    opacity: 1%;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-	.hex-svg > *:nth-child(1) {
-		animation: 1s fader var(--delay) ease-in-out alternate infinite;
-	}
+  .hex-svg > *:nth-child(1) {
+    animation: 1s fader var(--delay) ease-in-out alternate infinite;
+  }
 
-	.hex-svg > *:nth-child(2) {
-		animation: 1s fader calc(var(--delay) + 0.2s) ease-in-out alternate infinite;
-	}
+  .hex-svg > *:nth-child(2) {
+    animation: 1s fader calc(var(--delay) + 0.2s) ease-in-out alternate infinite;
+  }
 
-	.hex-svg > *:nth-child(3) {
-		animation: 1s fader calc(var(--delay) + 0.4s) ease-in-out alternate infinite;
-	}
+  .hex-svg > *:nth-child(3) {
+    animation: 1s fader calc(var(--delay) + 0.4s) ease-in-out alternate infinite;
+  }
 }
 
 @keyframes draw {
-	to {
-		stroke-dashoffset: 0;
-	}
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes fill {
-	0% {
-		fill-opacity: 0;
-	}
-	100% {
-		fill-opacity: 1;
-	}
+  0% {
+    fill-opacity: 0;
+  }
+  100% {
+    fill-opacity: 1;
+  }
 }

@@ -8,10 +8,10 @@ const Headline = ({ firstName }) => {
 			strokeWidth="2"
 			className="text-line">
 			<linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
-				<stop offset="0%" stop-color="hsl(var(--muted-foreground))" />
-				<stop offset="60%" stop-color="hsl(var(--muted-foreground))" />
-				<stop offset="90%" stop-color="var(--primary_C)" />
-				<stop offset="100%" stop-color="var(--primary_C)" />
+				<stop offset="0%" stopColor="hsl(var(--muted-foreground))" />
+				<stop offset="60%" stopColor="hsl(var(--muted-foreground))" />
+				<stop offset="90%" stopColor="var(--primary_C)" />
+				<stop offset="100%" stopColor="var(--primary_C)" />
 			</linearGradient>
 			<text
 				x="50%"
