@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
 const Triangle = ({ width, height, depth = 0 }) => {
-	const [type, setType] = useState(getTriangleType(depth));
 	const ref = useRef(null);
 	const moreRef = useRef(null);
 	const delay = Math.floor(Math.random() * 50) / 40;
@@ -13,10 +12,10 @@ const Triangle = ({ width, height, depth = 0 }) => {
 		} else if (moreRef.current) {
 			moreRef.current.style.setProperty('--height', `${height}px`);
 			moreRef.current.style.setProperty('--width', `${width}px`);
-			console.log('height:::::', height);
-			console.log('width:::::::', width);
 		}
 	}, [width, height, delay]);
+
+  const type = getTriangleType(depth)
 
 	return type === 1 ? (
 		<svg
@@ -24,7 +23,6 @@ const Triangle = ({ width, height, depth = 0 }) => {
 			ref={ref}
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 68 68"
-			transform={`rotate(${rotation})`}
 			fill="none"
 			strokeWidth={depth + 1}
 			strokeLinecap="round"
