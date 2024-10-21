@@ -17,7 +17,6 @@ const Triangle = ({ width, height, depth = 0 }) => {
 		}
 	}, [width, height, delay]);
 
-	const rotation = [0, 120, 240][Math.floor(Math.random() * 3)];
 	if (depth === 0) moreTriangles = Math.random() > 0.5 ? true : false;
 	return moreTriangles ? (
 		<div
@@ -29,7 +28,6 @@ const Triangle = ({ width, height, depth = 0 }) => {
 			ref={ref}
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 68 68"
-			transform={`rotate(${rotation})`}
 			fill="none"
 			strokeWidth="1"
 			strokeLinecap="round"
