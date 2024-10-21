@@ -18,7 +18,10 @@ const Triangle = ({ width, height, depth = 0 }) => {
     }
   }, [width, height, delay]);
 
+  // option 1: give all triangles a random rotation
   const rotation = [0, 120, 240][Math.floor(Math.random() * 3)];
+  // option 2: rotate triangles by size
+  // const rotation = [0, 120, 240][depth % 3];
   return type === 1 ? (
     <svg
       className={'triangle-svg' + ' depth-' + depth}

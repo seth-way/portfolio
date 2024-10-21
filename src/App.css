@@ -12,7 +12,8 @@
   #headline-svg {
     z-index: 4;
     font-family: 'Plaster', georgia, times, serif;
-		font-family: 'Capriola', sans-serif;
+    font-family: 'Capriola', sans-serif;
+    transform: rotate(-1deg) skew(-10deg);
     /* transform: scaleX(0.9); */
     text {
       text-transform: uppercase;
@@ -48,11 +49,12 @@
       display: none;
     }
 
-		.triangle-svg.depth-2 {
-			> *:nth-child(3), > *:nth-child(7) {
-				display: none;
-			}
-		}
+    .triangle-svg.depth-2 {
+      > *:nth-child(3),
+      > *:nth-child(7) {
+        display: none;
+      }
+    }
 
     h2 {
       font-family: 'Rowdies', sans-serif;
@@ -114,7 +116,7 @@
 
 @keyframes fader {
   0% {
-    opacity: 7%;
+    opacity: 8%;
   }
   100% {
     opacity: 3%;
