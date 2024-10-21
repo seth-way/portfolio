@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import Headline from '@/components/Headline';
-import HexBG from '@/components/HexBG';
 import TriangleBG from '@/components/TriangleBG';
 import { Card } from '@/components/ui/card';
 
