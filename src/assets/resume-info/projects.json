@@ -2,7 +2,7 @@
   {
     "title": "6° of Kevin Bacon",
     "short": "bacon",
-    "description": "This app is a sleek UI built using React & designed to challenge users on their knowledge of movie trivia. Using an input device or a touchscreen, a user can drag and drop movies or movie stars while trying to create a valid puzzle. A puzzle is only valid if a star is between 2 movies they starred in vice versa.",
+    "description": "This app is a sleek UI built using React & designed to challenge users on their knowledge of movie trivia. Using an input device or a touchscreen, a user can drag and drop movies or movie stars while trying to create a valid puzzle. A puzzle is only valid if a star is between two movies they starred in, and vice versa.",
     "contributors": [],
     "tech": [
       "react",

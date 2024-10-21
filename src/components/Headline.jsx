@@ -21,7 +21,7 @@ const Headline = ({ firstName }) => {
 				textAnchor="middle"
 				fontSize="92"
 				// fill="url(#Gradient1)"
-				fill="hsl(var(--foreground))"
+				fill="hsl(var(--muted-foreground))"
 				>
 				{firstName}
 			</text>
