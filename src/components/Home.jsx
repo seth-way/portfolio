@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import Headline from '@/components/Headline';
 import HexBG from '@/components/HexBG';
+import TriangleBG from '@/components/TriangleBG';
 import { Card } from '@/components/ui/card';
 
 import gitHubLogo from '../assets/images/github.svg';
@@ -51,7 +52,7 @@ export default function Home() {
           <img src={linkedinLogo} alt='linkedIn logo' />
         </motion.a>
       </div>
-      <HexBG />
+      <TriangleBG />
     </Card>
   );
 }
