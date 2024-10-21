@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react';
 import { useWindowSize } from '@react-hook/window-size/throttled';
-import TriangleGroup from '@/components/TriangleGroup';
+import Triangle from '@/components/Triangle';
 
 export default function TriangleBG() {
   const [width, height] = useWindowSize();
   const gridRef = useRef(null);
   const scaleFactor = 2;
-  const [triWidth, triHeight, triOffset] = [104, 90, 32].map(
+  const [totalHeight, totalWidth, triWidth, triHeight, triGapX, triGapY] = [68, 68, 52, 45, 8, 23].map(
     original => original * scaleFactor
   );
 
@@ -18,11 +18,12 @@ export default function TriangleBG() {
       const { current } = gridRef;
       current.style.setProperty('--tri-width', `${triWidth}px`);
       current.style.setProperty('--tri-height', `${triHeight}px`);
-      current.style.setProperty('--tri-offset', `-${triOffset}px`);
+      current.style.setProperty('--tri-gapX', `-${triGapX}px`);
+      current.style.setProperty('--tri-gapY', `-${triGapY}px`)
       current.style.setProperty('--num-rows', numRows.toString());
       current.style.setProperty('--num-cols', numCols.toString());
     }
-  }, [width, height, triHeight, triOffset, triWidth, numCols, numRows]);
+  }, [width, height, triHeight, triGapX, triWidth, numCols, numRows]);
 
   return (
     <div
@@ -35,19 +36,16 @@ export default function TriangleBG() {
         .fill(null)
         .map((_row, row) => (
           <div
-            className='inline-flex min-w-[100vw] mt-[var(--tri-offset)] shrink-0 odd:ml-[calc(var(--tri-height)/-2)]'
+            className='inline-flex [&>*]:ml-[calc(var(--tri-gapX)*2)] min-w-[100vw] [&>*]:mt-[var(--tri-gapY)] shrink-0 odd:ml-[calc(var(--tri-width)/-2)]'
             key={`h-row-${row}`}
           >
             {Array(numCols)
               .fill(null)
               .map((_col, col) => (
-                <TriangleGroup
-                  width={triWidth}
-                  height={triHeight}
+                <Triangle
+                  width={totalWidth}
+                  height={totalHeight}
                   key={`h-${row}-${col}`}
-                  row={row}
-                  col={col}
-                  depth={0}
                 />
               ))}
           </div>
