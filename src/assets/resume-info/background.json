@@ -2,7 +2,11 @@
   "fullName": "Seth Way",
   "role": "Software Developer",
   "image": "headShot.jpg",
-  "bio": "Since honorably completing my Military Service, I’ve graduated from the Microsoft Software & Systems Academy and attended the Turing School, one of the nation’s leading Software Engineering bootcamps. I’ve learned the basics and some highly advanced concepts in several programming languages. I've put those skills to use to create interesting and useful tools. I’ve met project deadlines while working with teams of incredibly talented individuals. I’m excited and motivated to take on the next challenge.",
+  "bio": [
+    "Creative and intellectually curious Web Developer with hands-on experience designing, building, and testing complex web applications. I have a passion for creating software solutions that are fluid, thoughtful, and user-centric.",
+    "After honorably completing my military service, I graduated from the Microsoft Software & Systems Academy and attended Turing School, one of the nation’s leading software engineering bootcamps. There, I gained a strong foundation in several programming languages, from the basics to advanced concepts.",
+    "I’ve applied these skills to develop interesting and useful tools, consistently meeting project deadlines while collaborating with teams of talented individuals. I’m excited and motivated to contribute to impactful, forward-facing codebases."
+  ],
   "email": "way.sethaniel@gmail.com",
   "phone": "570-419-2673",
   "github": "https://github.com/seth-way",

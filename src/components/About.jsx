@@ -46,9 +46,13 @@ const About = () => {
         >
           <img id='profile-pic' src={headShot} alt='profile headshot of dev' />
         </div>
-        <section className='flex flex-col items-center'>
+        <section className='flex flex-col items-center gap-2'>
           <h2 className='mb-4'>About Me</h2>
-          <p className='max-w-sm'>{bio}</p>
+          {bio.map((bioSection, idx) => (
+            <p key={`bio_${idx}`} className='max-w-sm'>
+              {bioSection}
+            </p>
+          ))}
         </section>
       </div>
       <div className='flex flex-col md:flex-row items-center gap-8'>
