@@ -61,7 +61,6 @@ body {
 
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
-
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
@@ -87,9 +86,6 @@ body {
     --radius: 0.5rem;
     --primary_C: var(--red);
     --secondary_C: var(--blue);
-    --bg-hex: #f4f1f1;
-    --fg-hex: #909090;
-    --text-hex: #000000;
   }
   .dark {
     --background: 240 10% 3.9%;
@@ -118,9 +114,6 @@ body {
     --chart-5: 340 75% 55%;
     --primary_C: var(--yellow);
     --secondary_C: var(--pink);
-    --bg-hex: #09090b;
-    --fg-hex: #808080;
-    --text-hex: #ffffff;
   }
 }
 
