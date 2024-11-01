@@ -6,13 +6,22 @@
   { "skill": "React-Router", "value": 80 },
   { "skill": "CSS", "value": 50 },
   { "skill": "HTML", "value": 50 },
+  { "skill": "Cypress E2E Testing", "value": 80 },
+  { "skill": "Mocha/Chai Unit Testing", "value": 40 },
   { "skill": "Git", "value": 60 },
+  { "skill": "RESTful APIs", "value": 60 },
   { "skill": "ExpressJS", "value": 80 },
+  { "skill": "NextJS", "value": 70 },
+  { "skill": "Vite", "value": 70 },
+  { "skill": "Webpack", "value": 30 },
   { "skill": "TailwindCSS", "value": 30 },
+  { "skill": "WebSockets", "value": 40 },
   { "skill": "C#", "value": 25 },
   { "skill": "Python", "value": 20 },
   { "skill": "SQL", "value": 20 },
   { "skill": "Vercel", "value": 50 },
   { "skill": "Node.js", "value": 80 },
-  { "skill": "zustand", "value": 50 }
+  { "skill": "zustand", "value": 50 },
+  { "skill": "ReCharts", "value": 40 }
+
 ]
