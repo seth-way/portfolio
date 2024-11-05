@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from 'react';
 import Img from '@/components/ui/img';
 import {
   Card,
@@ -7,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import useInView from '@/lib/hooks/use-in-view';
 import { Separator } from '@/components/ui/separator';
 import { motion } from 'framer-motion';
 import badges from '@/assets/resume-info/badges.json';
@@ -15,7 +17,19 @@ const badgeURL = 'https://img.shields.io/badge/';
 
 const Project = ({ project, handleClick }) => {
   const { title, description, tech } = project;
+  const [animate1, setAnimate1] = useState(false);
+  const [animate2, setAnimate2] = useState(false);
+  const ref = useRef(null);
+  const isVisible = useInView(ref);
 
+  useEffect(() => {
+    if (isVisible && !animate1) {
+      setAnimate1(true);
+      setTimeout(() => {
+        setAnimate2(true);
+      }, 500);
+    }
+  }, [isVisible]);
   return (
     <motion.div
       className='w-[min(250px,90vw)] aspect-[2/3] group hover:cursor-pointer'
@@ -24,17 +38,18 @@ const Project = ({ project, handleClick }) => {
       transition={{ type: 'spring' }}
       onClick={() => handleClick(project)}
       aria-label={`More info about ${project} project`}
+      ref={ref}
     >
       <Card className='w-full h-full relative'>
         <CardHeader className='h-1/5'>
           <CardTitle>{title}</CardTitle>
         </CardHeader>
-        <Separator />
+        <Separator className={`w-0 ${animate1 ? 'animate-expand' : ''}`} />
         <CardDescription className='h-1/4 p-4 border-box !line-clamp-4 overflow-hidden align-baseline text-wrap truncate'>
           {/* {description.length > 100 ? description.slice(0,  100) + '...' : description} */}
           {description}
         </CardDescription>
-        <Separator className="mt-4"/>
+        <Separator className={`mt-4 w-0 ${animate2 ? 'animate-expand' : ''}`} />
         <CardFooter className='w-full h-[55%]'>
           <div className='w-full flex flex-wrap items-center justify-center gap-2 p-2 border-box overflow-hidden'>
             {tech.map((type, idx) =>

@@ -29,28 +29,7 @@ import { Badge } from '@/components/ui/badge';
 import co_contributors from '@/assets/resume-info/co_contributors.json';
 
 const Content = ({ type, project }) => {
-  const { title, short, description, contributors, tech, notes, links } =
-    project;
-
-  const displayTech = tech =>
-    tech.length ? (
-      <div id='project-tech'>
-        <h3>Tech</h3>
-        <ul>
-          {tech.map((type, i) => (
-            <li key={`${i}-${type}`}>
-              <IMG
-                folder='tech'
-                filename={`${type}.svg`}
-                alt={`${type} badge logo`}
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
-    ) : (
-      <></>
-    );
+  const { title, short, description, contributors, notes, links } = project;
 
   const displayNotes = notes =>
     notes.length ? (
@@ -144,10 +123,13 @@ const Content = ({ type, project }) => {
         >
           <DialogDescription className='my-2'>{description}</DialogDescription>
           <div className='w-full flex justify-center'>
-            <Img imgName={short} folder='projects' type='gif' />
+            <Img
+              imgName={short}
+              folder='projects'
+              type='gif'
+              alt='project preview'
+            />
           </div>
-
-          {/* {tech && displayTech(tech)} */}
           {notes && displayNotes(notes)}
           {links && displayLinks(links)}
           {contributors && displayContributors(contributors)}
@@ -167,10 +149,13 @@ const Content = ({ type, project }) => {
         >
           <DrawerDescription className='my-4'>{description}</DrawerDescription>
           <div className='w-full flex justify-center'>
-            <Img imgName={short} folder='projects' type='gif' />
+            <Img
+              imgName={short}
+              folder='projects'
+              type='gif'
+              alt='project preview'
+            />
           </div>
-
-          {/* {tech && displayTech(tech)} */}
           {notes && displayNotes(notes)}
           {links && displayLinks(links)}
           {contributors && displayContributors(contributors)}
