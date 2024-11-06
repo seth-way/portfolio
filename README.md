@@ -40,6 +40,7 @@ This app is meant to help any developer easily showcase their work.
   - I only used badges from this [site](https://github.com/alexandresanlim/Badges4-README.md-Profile). If you use your own, it may require a small refactor.
 - Add your own headshot & save it at `src/assets/images/headShot.jpg`.
 - Save the most recent version of your resume at `src/assets/resume.pdf`.
+- Update the browser title to your own in the index.html `<title>` tag.
 - If you use this app, I'd love to hear about it! Give me a shoutout on linkedin & a star on github.
  
 ## Deploy:
