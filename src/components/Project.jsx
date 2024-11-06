@@ -32,7 +32,7 @@ const Project = ({ project, handleClick }) => {
   }, [isVisible]);
   return (
     <motion.div
-      className='w-[min(250px,90vw)] aspect-[2/3] group hover:cursor-pointer'
+      className='w-[min(250px,90vw)] aspect-[2/3] hover:cursor-pointer z-10 group'
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.9 }}
       transition={{ type: 'spring' }}
@@ -46,7 +46,6 @@ const Project = ({ project, handleClick }) => {
         </CardHeader>
         <Separator className={`w-0 ${animate1 ? 'animate-expand' : ''}`} />
         <CardDescription className='h-1/4 p-4 border-box !line-clamp-4 overflow-hidden align-baseline text-wrap truncate'>
-          {/* {description.length > 100 ? description.slice(0,  100) + '...' : description} */}
           {description}
         </CardDescription>
         <Separator className={`mt-4 w-0 ${animate2 ? 'animate-expand' : ''}`} />

@@ -27,6 +27,21 @@
     }
   },
   {
+    "title": "Mini-App Sandbox",
+    "short": "mini-apps",
+    "description": "This app is a NextJS / React sandbox for experimenting with new & interesting libraries.",
+    "contributors": [],
+    "tech": ["react", "typescript", "nextjs", "framer"],
+    "notes": [
+      "The ReCharts mini-app processes & normalizes NFL DVOA data to display dynamic, weekly information in a clean & dynamic Cartesian graph.",
+      "The chess mini-app was a proof-of-concept code spike for the React board & game-logic used in the Chess with Frien-emies FE Microservice."
+    ],
+    "links": {
+      "repo": "https://github.com/seth-way/mini-app-sandbox",
+      "live": "https://mini-app-sandbox.vercel.app/"
+    }
+  },
+  {
     "title": "Dangol'Weather",
     "short": "weather",
     "description": "A local weather app that utilizes both the OpenWeatherMap & Google Maps auto-complete APIs. A user can input any US city and get the local weather, along with a 5-day forecast and a King of the Hill's - Boomhauer - inspired, quote that is tonally related to the state of the returned local weather.",
