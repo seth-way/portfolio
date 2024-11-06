@@ -37,7 +37,7 @@ This app is meant to help any developer easily showcase their work.
   - Their basename should share the `"short"` attribute from the project's info in `src/assets/resume-info/projects`.
   - example → a gif for a project with the attribute `"short":"spaceship"` would be saved as `src/assets/images/projects/spaceship.gif`
 - To create new tech badges, add them to `src/assets/resume-info/badges.json`.
-  - I only used badges from this [site](https://dev.to/envoy_/150-badges-for-github-pnk). If you use your own, it may require a small refactor.
+  - I only used badges from this [site](https://github.com/alexandresanlim/Badges4-README.md-Profile). If you use your own, it may require a small refactor.
 - Add your own headshot & save it at `src/assets/images/headShot.jpg`.
 - Save the most recent version of your resume at `src/assets/resume.pdf`.
 - If you use this app, I'd love to hear about it! Give me a shoutout on linkedin & a star on github.
