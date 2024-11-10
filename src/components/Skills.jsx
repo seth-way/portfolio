@@ -17,7 +17,7 @@ const Skills = () => {
 							transition={{ duration: 1, type: 'spring' }}
 							whileInView={{ x: '0%' }}
 							viewport={{ once: true }}
-							className="text-3xl border-2 border-solid italic text-[hsl(var(--muted-foreground))] font-extrabold py-2 px-4">
+							className="text-xl border-2 border-solid italic text-text font-extrabold px-3 pt-1 mb-2">
 							{category}
 						</motion.h3>
 						<div className="flex items-center justify-center flex-wrap gap-x-[clamp(0.5rem,1.5vw,1rem)]">
