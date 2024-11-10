@@ -1,27 +1,73 @@
 [
-  { "skill": "ReactJS", "value": 85 },
-  { "skill": "TypeScript", "value": 30 },
-  { "skill": "JavaScript (ES6+)", "value": 90 },
-  { "skill": "React Hooks", "value": 80 },
-  { "skill": "React-Router", "value": 80 },
-  { "skill": "CSS", "value": 50 },
-  { "skill": "HTML", "value": 50 },
-  { "skill": "Cypress E2E Testing", "value": 80 },
-  { "skill": "Mocha/Chai Unit Testing", "value": 40 },
-  { "skill": "Git", "value": 60 },
-  { "skill": "RESTful APIs", "value": 60 },
-  { "skill": "ExpressJS", "value": 80 },
-  { "skill": "NextJS", "value": 70 },
-  { "skill": "Vite", "value": 70 },
-  { "skill": "Webpack", "value": 30 },
-  { "skill": "TailwindCSS", "value": 30 },
-  { "skill": "WebSockets", "value": 40 },
-  { "skill": "C#", "value": 25 },
-  { "skill": "Python", "value": 20 },
-  { "skill": "SQL", "value": 20 },
-  { "skill": "Vercel", "value": 50 },
-  { "skill": "Node.js", "value": 80 },
-  { "skill": "zustand", "value": 50 },
-  { "skill": "ReCharts", "value": 40 }
-
+  {
+    "category": "Front-End Development",
+    "skills": [
+      { "skill": "ReactJS", "value": 85 },
+      { "skill": "JavaScript (ES6+)", "value": 90 },
+      { "skill": "HTML5", "value": 50 },
+      { "skill": "React Hooks", "value": 80 },
+      { "skill": "React-Router", "value": 80 },
+      { "skill": "TypeScript", "value": 30 }
+    ]
+  },
+  {
+    "category": "State Management & Data Visualization",
+    "skills": [
+      { "skill": "zustand", "value": 50 },
+      { "skill": "ReCharts", "value": 40 }
+    ]
+  },
+  {
+    "category": "Networking & API Communication",
+    "skills": [
+      { "skill": "Network Requests", "value": 85 },
+      { "skill": "WebSockets", "value": 40 },
+      { "skill": "RESTful APIs", "value": 60 }
+    ]
+  },
+  {
+    "category": "Styling & UI Libraries",
+    "skills": [
+      { "skill": "CSS3", "value": 50 },
+      { "skill": "TailwindCSS", "value": 50 },
+      { "skill": "shadcn/ui", "value": 40 },
+      { "skill": "MaterialUI", "value": 30 },
+      { "skill": "RadixUI", "value": 30 }
+    ]
+  },
+  {
+    "category": "Back-End Development",
+    "skills": [
+      { "skill": "Node.js", "value": 80 },
+      { "skill": "ExpressJS", "value": 80 },
+      { "skill": "C#", "value": 25 },
+      { "skill": "Python", "value": 20 },
+      { "skill": "SQL", "value": 20 }
+    ]
+  },
+  {
+    "category": "Testing & Quality Assurance",
+    "skills": [
+      { "skill": "Cypress - E2E, Component", "value": 80 },
+      { "skill": "Mocha/Chai - Unit", "value": 40 }
+    ]
+  },
+  {
+    "category": "Build Tools & SDKs",
+    "skills": [
+      { "skill": "NextJS", "value": 70 },
+      { "skill": "Vite", "value": 70 },
+      { "skill": "Webpack", "value": 30 }
+    ]
+  },
+  {
+    "category": "Deployment, DevOps & Version Control",
+    "skills": [
+      { "skill": "Git", "value": 60 },
+      { "skill": "Vercel", "value": 50 },
+      { "skill": "Azure", "value": 30 },
+      { "skill": "CI/CD", "value": 25 },
+      { "skill": "Github Actions", "value": 25 }
+    ]
+  }
 ]
