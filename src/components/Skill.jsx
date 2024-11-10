@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-const textColors = ['text-primary_C', 'hsl(var(--chart-2))', 'text-text'];
+const textColors = ['text-primary_C', 'hsl(var(--chart-2))', 'hsl(var(--muted-foreground))'];
 
 const getTextColor = idx => textColors[idx % textColors.length];
 
