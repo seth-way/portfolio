@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <Card
       id='home'
-      className='section-card relative h-[98vh] flex flex-col items-center justify-center overflow-hidden gap-4  z-10'
+      className='section-card relative h-[98vh] flex flex-col items-center justify-center overflow-hidden gap-4 z-10'
     >
       <Headline firstName={firstName} />
       <p className='m-0 lowercase'>{role}.</p>
