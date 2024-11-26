@@ -1,4 +1,25 @@
-[
+[  {
+  "title": "Chess with Frien-emies",
+  "short": "chess",
+  "description": "This React front-end chess game connects to a back-end service managing game state and enabling user interaction via WebSockets. It leverages Vite Federations to expose the game component as a consumable microservice.",
+  "contributors": ["Zelalem Fitru", "Carissa Hluchan", "Robert Phillips", "Gwyneth Patrick", "Austin K", "Cory Bretsch", "Evan Davis", "Erin Pintozzi", "Jan Lehigh", "Lance Nelson", "Tyler Noble"],
+  "tech": [
+    "react",
+    "vite",
+    "rollup",
+    "socket-io",
+    "javascript"
+  ],
+  "notes": [
+    "This application was deployed as either a standalone service or a consumable microservice, with its React component endpoint remotely exposed for easy integration.",
+    "WebSocket connections with assignable rooms allowed real-time game updates for multiple users.",
+    "Detailed architecture diagrams were created to illustrate the data flow, logic, and JSON contracts, supporting a multi-level microservice design across front-end and back-end services.",
+    "*NOTE: As this application requires the continued deployment of external repos/dbs, I haven't included a live link. Please look to the gif for a working demo."
+],
+  "links": {
+    "repo": "https://github.com/seth-way/chess_fe_microservice"
+  }
+},
   {
     "title": "6° of Kevin Bacon",
     "short": "bacon",
