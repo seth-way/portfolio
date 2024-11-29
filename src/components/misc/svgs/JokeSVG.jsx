@@ -1,7 +1,6 @@
-import AIMSVG from '@/components/misc/svgs/AIM';
 import BlockbusterSVG from '@/components/misc/svgs/BlockBuster';
-import JurassicSVG from '@/components/misc/svgs/Jurassic';
-const JokeSVG = () => {
+import DinoSVG from '@/components/misc/svgs/DinoSVG';
+const JokeSVG = ({ animate }) => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -10,10 +9,9 @@ const JokeSVG = () => {
 			strokeLinecap="round"
 			height="100%"
 			width="100%"
-			className="relative overflow-visible">
-			<JurassicSVG />
-			<BlockbusterSVG />
-			<AIMSVG />
+			className="absolute inset-0 overflow-visible">
+			<DinoSVG animate={animate} />
+			<BlockbusterSVG animate={animate} />
 		</svg>
 	);
 };

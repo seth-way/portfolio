@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Frame from '@/components/misc/spring-frame';
-import Tiles from '@/components/misc/tiles';
-import JokeSVG from '@/components/misc/svgs/JokeSVG';
+import Punchline from './Punchline';
 import { motion } from 'framer-motion';
 
 const variants = {
@@ -12,15 +11,13 @@ const variants = {
 const punchline = 'None of them hired me to their coding teams.';
 
 const Joke = () => {
-	//const [variant, setVariant] = useState('closed');
-	const [variant, setVariant] = useState('open');
-	//const [animateTiles, setAnimateTiles] = useState(false);
-	const [animateTiles, setAnimateTiles] = useState(true);
+	const [variant, setVariant] = useState('closed');
+	const [animate, setAnimate] = useState(false);
 	const handleClick = () => {
 		setVariant(prev => (prev === 'closed' ? 'open' : 'closed'));
 		setTimeout(() => {
-			setAnimateTiles(true);
-		}, 1500);
+			setAnimate(prev => (prev ? false : true));
+		}, 1000);
 	};
 	return (
 		<Frame>
@@ -28,8 +25,7 @@ const Joke = () => {
 				<motion.div
 					variants={variants}
 					transition={{ duration: 1.1 }}
-					//initial="closed"
-					initial="open"
+					initial="closed"
 					animate={variant}
 					className="h-[200%] w-full flex flex-col">
 					<div className="flex items-center justify-center h-1/2 p-4">
@@ -39,7 +35,7 @@ const Joke = () => {
 						</p>
 					</div>{' '}
 					<div className="w-full h-1/2">
-						<Tiles words={punchline} animate={animateTiles} />
+						<Punchline punchline={punchline} animate={animate} />
 					</div>
 				</motion.div>
 			</div>
