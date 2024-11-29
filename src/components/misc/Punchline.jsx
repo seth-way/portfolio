@@ -29,9 +29,9 @@ const Punchline = ({ punchline, animate }) => {
 	let totalDelay = 0;
 
 	return (
-		<div className="relative w-full h-full flex items-center justify-center">
+		<div className="relative w-full h-full flex justify-center items-start">
 			<JokeSVG animate={animate} />
-			<p className="max-w-[80%] flex flex-wrap justify-center gap-1">
+			<p className="max-w-[80%] flex flex-wrap justify-center gap-1 pt-6">
 				{words.map((word, i) => {
 					if (i) totalDelay += (words[i - 1].length + 1) * CHAR_DELAY;
 					return (

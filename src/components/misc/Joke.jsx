@@ -8,7 +8,7 @@ const variants = {
 	closed: { transform: 'translateY(0%)' }
 };
 
-const punchline = 'None of them hired me to their coding teams.';
+const punchline = 'None of them hired me as a developer. \n \n ¯\\_(ツ)_/¯';
 
 const Joke = () => {
 	const [variant, setVariant] = useState('closed');
