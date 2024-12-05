@@ -4,7 +4,6 @@ const Headline = ({ firstName }) => {
 			id="headline-svg"
 			viewBox="0 0 800 100"
 			xmlns="http://www.w3.org/2000/svg"
-			//stroke="hsl(var(--foreground))"
 			stroke="var(--primary_C)"
 			strokeWidth="2"
 			className="text-line">
