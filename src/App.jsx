@@ -9,17 +9,17 @@ import Misc from '@/components/Misc';
 import Footer from '@/components/Footer';
 
 function App() {
-	return (
-		<>
-			<NavBar />
-			<Home />
-			<About />
-			<Skills />
-			<Projects />
-			<Misc />
-			<Footer />
-		</>
-	);
+  return (
+    <>
+      <NavBar />
+      <Home />
+      <About />
+      <Skills />
+      <Projects />
+      <Misc />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
