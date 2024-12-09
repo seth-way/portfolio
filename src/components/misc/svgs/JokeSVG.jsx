@@ -1,4 +1,4 @@
-import BlockbusterSVG from '@/components/misc/svgs/BlockBuster';
+import BlockbusterSVG from '@/components/misc/svgs/Blockbuster_fix';
 import DinoSVG from '@/components/misc/svgs/DinoSVG';
 const JokeSVG = ({ animate }) => {
 	return (
