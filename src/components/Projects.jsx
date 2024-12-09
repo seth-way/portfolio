@@ -1,25 +1,12 @@
 import { useState } from 'react';
 import Project from '@/components/Project';
 import Content from '@/components/Content';
-// import { cn } from '@/lib/utils';
 import { useMediaQuery } from '@/lib/hooks/use-media-query';
-// import { Button } from '@/components/ui/button';
 import {
   Dialog,
-  // DialogContent,
-  // DialogDescription,
-  // DialogHeader,
-  // DialogTitle,
-  // DialogTrigger,
 } from '@/components/ui/dialog';
 import {
   Drawer,
-  // DrawerClose,
-  // DrawerContent,
-  // DrawerDescription,
-  // DrawerFooter,
-  // DrawerHeader,
-  // DrawerTitle,
 } from '@/components/ui/drawer';
 import { Card } from '@/components/ui/card';
 import projects from '@/assets/resume-info/projects.json';
