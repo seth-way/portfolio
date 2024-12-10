@@ -5,9 +5,9 @@ import App from './App.jsx';
 import './index.css';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <ThemeProvider defaultTheme='dark' storageKey='vite-ui-theme'>
-      <App />
-    </ThemeProvider>
-  </StrictMode>
+	<StrictMode>
+		<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+			<App />
+		</ThemeProvider>
+	</StrictMode>
 );
