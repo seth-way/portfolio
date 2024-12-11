@@ -72,11 +72,12 @@ const Clouds = ({ isOpen, jumps }) => {
         variants={variants.heading}
         className='absolute inset-0 z-[31] bg-card flex flex-col items-center justify-center gap-4'
       >
-        <h3 className='text-text'>{jumps} Airborne Jumps</h3>
+        <h3 className='text-text text-lg'>Successfully jumped from</h3>
         <div className='flex items-center justify-center relative h-1/4 gap-4'>
           <Logo82nd />
           <Logo173rd />
         </div>
+        <p className='text-ring'><span className="text-secondary_C">{jumps}</span> perfectly good airplanes</p>
       </motion.div>
       <motion.svg
         initial='closed'

@@ -2,12 +2,8 @@ import { useState } from 'react';
 import Project from '@/components/Project';
 import Content from '@/components/Content';
 import { useMediaQuery } from '@/lib/hooks/use-media-query';
-import {
-  Dialog,
-} from '@/components/ui/dialog';
-import {
-  Drawer,
-} from '@/components/ui/drawer';
+import { Dialog } from '@/components/ui/dialog';
+import { Drawer } from '@/components/ui/drawer';
 import { Card } from '@/components/ui/card';
 import projects from '@/assets/resume-info/projects.json';
 
@@ -29,7 +25,7 @@ const Projects = () => {
   const [currentProject, setProject] = useState({ ...blankProject });
   const isDesktop = useMediaQuery('(min-width: 768px)');
 
-  const handleClick = (project) => {
+  const handleClick = project => {
     setProject(() => project);
     setOpen(true);
   };
@@ -37,12 +33,12 @@ const Projects = () => {
   return (
     <Card
       id='projects'
-      className='section-card px-4 py-8 flex flex-col items-center justify-center gap-8'
+      className='section-card px-4 py-8 flex flex-col items-center justify-center gap-8 overflow-hidden'
     >
       {isDesktop ? (
         <Dialog open={open} onOpenChange={setOpen}>
           <h2>Projects</h2>
-          <div className='flex flex-wrap align-center justify-center gap-4'>
+          <div className='flex gap-4 overflow-x-scroll md:overflow-x-auto overflow-y-hidden md:flex-wrap md:justify-center align-center max-w-full p-4'>
             {projects.map((project, idx) => (
               <Project
                 project={project}
@@ -56,7 +52,7 @@ const Projects = () => {
       ) : (
         <Drawer open={open} onOpenChange={setOpen} modal={true}>
           <h2 className='uppercase'>Projects</h2>
-          <div className='flex flex-wrap align-center justify-center gap-4'>
+          <div className='flex gap-4 overflow-x-scroll md:overflow-x-auto overflow-y-hidden md:flex-wrap md:justify-center align-center max-w-full p-4'>
             {projects.map((project, idx) => (
               <Project
                 project={project}
@@ -65,7 +61,7 @@ const Projects = () => {
               />
             ))}
           </div>
-          <Content type='drawer' project={currentProject} modal={true}/>
+          <Content type='drawer' project={currentProject} modal={true} />
         </Drawer>
       )}
     </Card>
