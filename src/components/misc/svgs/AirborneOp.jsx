@@ -7,7 +7,7 @@ import Paratrooper from '@/components/misc/svgs/Paratrooper';
 const AirborneOp = ({ isOpen, handleClose, jumps }) => {
   const cardRef = useRef(null);
   const airplaneRef = useRef(null);
-  const throttler = useRef(0); // used to throttle click speed
+  const throttler = useRef(0);
   const [dir, setDir] = useState('ltr');
   const [paratroopers, setParatroopers] = useState([]);
 
