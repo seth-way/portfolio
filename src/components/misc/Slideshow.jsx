@@ -17,9 +17,10 @@ const TIMING = {
 TIMING.total = TIMING.transition * 2 + TIMING.display;
 
 const transitions = [
-	img => <Bars image={img} timing={TIMING} />,
 	img => <Cubic image={img} timing={TIMING} />,
-	img => <Dots image={img} timing={TIMING} />
+	img => <Dots image={img} timing={TIMING} />,
+    img => <Bars image={img} timing={TIMING} />,
+
 ];
 
 const Slideshow = () => {
