@@ -32,7 +32,7 @@ const Project = ({ project, handleClick }) => {
   }, [isVisible]);
   return (
     <motion.div
-      className='w-[min(250px,90vw)] aspect-[2/3] hover:cursor-pointer z-10 group'
+      className='aspect-[2/3] h-[calc(min(250px,90vw)*3/2)] hover:cursor-pointer z-10 group'
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.9 }}
       transition={{ type: 'spring' }}
