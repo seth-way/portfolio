@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Item = ({ children }) => {
 	return (
 		<motion.div
-			className="h-[calc(min(250px,90vw)*2/3)] aspect-[3/2] hover:cursor-pointer"
+			className="h-[calc(min(200px,90vw)*3/2)] aspect-[3/2] hover:cursor-pointer"
 			whileHover={{ scale: 1.05 }}
 			whileTap={{ scale: 0.95 }}
 			transition={{ type: 'spring' }}>
