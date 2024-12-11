@@ -107,7 +107,7 @@ const Slideshow = () => {
 			onClick={handleAddPrint}
 			ref={cardRef}>
 			<div className="absolute inset-0 flex flex-col items-center justify-center gap-2 select-none">
-				<h3 className="text-lg">🐾 Meet Bear-Doggy-Doo 🐾</h3>
+				<h3 className="text-lg">🐾 BF is Bear-Doggy-Doo 🐾</h3>
 				<p>The most goodest of good boys!</p>
 			</div>
 			<motion.div
