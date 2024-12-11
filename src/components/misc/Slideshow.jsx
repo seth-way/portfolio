@@ -7,7 +7,6 @@ import Cubic from '@/components/misc/transitions/Cubic';
 import Dots from '@/components/misc/transitions/Dots';
 const images = import.meta.glob('@/assets/images/bear/*.jpg', { eager: true });
 const bearImages = Object.values(images);
-console.log('bear images <><>', bearImages);
 
 const TIMING = {
 	transition: 2.5,
@@ -19,8 +18,7 @@ TIMING.total = TIMING.transition * 2 + TIMING.display;
 const transitions = [
 	img => <Cubic image={img} timing={TIMING} />,
 	img => <Dots image={img} timing={TIMING} />,
-    img => <Bars image={img} timing={TIMING} />,
-
+	img => <Bars image={img} timing={TIMING} />
 ];
 
 const Slideshow = () => {
