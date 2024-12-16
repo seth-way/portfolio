@@ -42,10 +42,12 @@ const Project = ({ project, handleClick }) => {
     >
       <Card className='w-full h-full relative'>
         <CardHeader className='h-1/5'>
-          <CardTitle>{title}</CardTitle>
+          <CardTitle className='transition-colors duration-700 group-hover:text-primary_C'>
+            {title}
+          </CardTitle>
         </CardHeader>
         <Separator className={`w-0 ${animate1 ? 'animate-expand' : ''}`} />
-        <CardDescription className='h-1/4 p-4 border-box !line-clamp-4 overflow-hidden align-baseline text-wrap truncate'>
+        <CardDescription className='transition-colors duration-700 group-hover:text-foreground h-1/4 p-4 border-box !line-clamp-4 overflow-hidden align-baseline text-wrap truncate'>
           {description}
         </CardDescription>
         <Separator className={`mt-4 w-0 ${animate2 ? 'animate-expand' : ''}`} />
@@ -54,7 +56,7 @@ const Project = ({ project, handleClick }) => {
             {tech.map((type, idx) =>
               badges[type] ? (
                 <img
-                  className='opacity-70 group-hover:opacity-100 max-w-[46%]'
+                  className='transition-opacity duration-700 opacity-70 group-hover:opacity-100 max-w-[46%]'
                   src={`${badgeURL}${badges[type]}`}
                   alt={`${type} logo badge`}
                   key={`project_${title}_${idx}`}
