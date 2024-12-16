@@ -12,6 +12,7 @@ const About = () => {
   const ref = useRef(null);
   useEffect(() => {
     const { current } = ref;
+
     if (current) {
       const handleScroll = () => {
         current.style.setProperty(
@@ -44,13 +45,20 @@ const About = () => {
           id='profile-pic-border'
           className='w-[min(50vh,50vw)] min-w-124 max-w-80'
         >
-          <img id='profile-pic' src={headShot} alt='profile headshot of dev' />
+          <img id='profile-pic' src={headShot} alt='headshot of dev' />
         </div>
-        <section className='flex flex-col items-center gap-2'>
+        <section
+          id='about-me-bio'
+          className='flex flex-col items-center gap-2 [&_b]:text-blue-500'
+        >
           <h2 className='mb-4'>About Me</h2>
           {bio.map((bioSection, idx) => (
-            <p key={`bio_${idx}`} className='max-w-sm'>
-              {bioSection}
+            <p
+              key={`bio_${idx}`}
+              className='max-w-sm'
+              dangerouslySetInnerHTML={{ __html: bioSection }}
+            >
+              {/*bioSection*/}
             </p>
           ))}
         </section>
