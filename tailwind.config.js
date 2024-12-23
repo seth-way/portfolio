@@ -63,6 +63,17 @@ export default {
 			gridTemplateColumns: {
 				24: 'repeat(24, minmax(0, 1fr))',
 				48: 'repeat(48, minmax(0, 1fr))'
+			},
+			textStrokeWidth: {
+				1: '1px',
+				2: '2px'
+			},
+			textStrokeColor: {
+				black: '#000',
+				white: '#fff'
+			},
+			dropShadow: {
+				'dark': '0px 0px 3px rgba(5, 5, 5, 0.95)'
 			}
 		},
 		keyframes: {
@@ -72,5 +83,19 @@ export default {
 			expand: 'expand 1s ease-in-out forwards'
 		}
 	},
-	plugins: [require('tailwindcss-animate')]
+	plugins: [
+		require('tailwindcss-animate'),
+		function ({ addUtilities }) {
+			addUtilities({
+				'.stroke-black': {
+					'-webkit-text-stroke-color': '#000',
+					'-webkit-text-stroke-width': '1px'
+				},
+				'.stroke-white': {
+					'-webkit-text-stroke-color': '#fff',
+					'-webkit-text-stroke-width': '1px'
+				}
+			});
+		}
+	]
 };
