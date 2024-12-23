@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Slider } from '@/components/ui/slider';
-import nQueens from '@/components/misc/algos/lib/nQueens';
+import nQueens from '@/lib/algos/nQueens';
 import NQueensGraphic from '@/components/misc/svgs/NQueens';
 
 export default function QueensDemo() {
@@ -24,15 +24,14 @@ export default function QueensDemo() {
 	};
 
 	return (
-		<div
-			className="w-full h-full flex flex-col items-center justify-between relative">
-			<div className="h-[90%] w-full relative flex items-center justify-evenly">
-				<div className="h-[90%] ratio-square">
+		<div className="w-full h-full p-2 flex flex-col items-center justify-between relative">
+			<div className="h-[85%] w-full relative flex items-center justify-around">
+				<div className="h-full aspect-square">
 					<NQueensGraphic n={n} queens={queens} />
 				</div>
 				<h3>{`n: ${tempN}`}</h3>
 			</div>
-			<div className="h-[10%] w-[80%] flex items-center justify-center">
+			<div className="h-[15%] w-[80%] flex items-end justify-center">
 				<Slider value={[tempN]} max={25} step={1} onValueChange={handleChange} />
 			</div>
 		</div>

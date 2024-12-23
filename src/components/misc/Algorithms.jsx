@@ -4,20 +4,22 @@ import PuzzleOverlay from '@/components/misc/algos/PuzzleOverlay';
 import TabGroup from '@/components/misc/algos/TabGroup';
 import Problem from '@/components/misc/algos/Problem';
 
-import LetterA from '@/components/misc/algos/icons/LetterA';
-import LetterQ from '@/components/misc/algos/icons/LetterQ';
+import LetterA from '@/components/misc/svgs/LetterA';
+import LetterQ from '@/components/misc/svgs/LetterQ';
 
 import problems from '@/components/misc/algos/problems';
 
-import { Crown } from 'lucide-react';
+import { Crown, TreePalm } from 'lucide-react';
 
 const title = ['I find complex logic puzzles', 'deeply fulfilling. 🧠'];
 
 export default function Algorithms() {
 	// const [isOpen, setIsOpen] = useState(false);
 	const [isOpen, setIsOpen] = useState(true);
-	const [activeLeft, setActiveLeft] = useState('algo-Q');
-	const [activeRight, setActiveRight] = useState('algo-nQueens');
+	//const [activeLeft, setActiveLeft] = useState('algo-Q');
+	const [activeLeft, setActiveLeft] = useState('algo-A');
+	//const [activeRight, setActiveRight] = useState('algo-nQueens');
+	const [activeRight, setActiveRight] = useState('algo-islands');
 	const cardRef = useRef(null);
 
 	useEffect(() => {
@@ -52,8 +54,7 @@ export default function Algorithms() {
 
 	const rightTabs = [
 		{ id: 'algo-nQueens', Icon: Crown },
-		{ id: 'algo-nQueens-2', Icon: Crown },
-		{ id: 'algo-nQueens-3', Icon: Crown }
+		{ id: 'algo-islands', Icon: TreePalm }
 	];
 
 	const view = activeLeft.split('-')[1];

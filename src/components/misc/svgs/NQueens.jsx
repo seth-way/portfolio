@@ -24,7 +24,7 @@ export default function NQueens({ n, queens }) {
 	const squareSize = Math.min(dimensions.width, dimensions.height) / n;
 
 	return (
-		<div ref={boardRef} className="h-full aspect-square relative">
+		<div ref={boardRef} className="h-full w-full relative">
 			<div
 				className="absolute top-0 left-0 grid"
 				style={{
