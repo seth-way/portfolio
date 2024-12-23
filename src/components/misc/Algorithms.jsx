@@ -14,12 +14,9 @@ import { Crown, TreePalm } from 'lucide-react';
 const title = ['I find complex logic puzzles', 'deeply fulfilling. 🧠'];
 
 export default function Algorithms() {
-	// const [isOpen, setIsOpen] = useState(false);
-	const [isOpen, setIsOpen] = useState(true);
-	//const [activeLeft, setActiveLeft] = useState('algo-Q');
-	const [activeLeft, setActiveLeft] = useState('algo-A');
-	//const [activeRight, setActiveRight] = useState('algo-nQueens');
-	const [activeRight, setActiveRight] = useState('algo-islands');
+	const [isOpen, setIsOpen] = useState(false);
+	const [activeLeft, setActiveLeft] = useState('algo-Q');
+	const [activeRight, setActiveRight] = useState('algo-nQueens');
 	const cardRef = useRef(null);
 
 	useEffect(() => {
