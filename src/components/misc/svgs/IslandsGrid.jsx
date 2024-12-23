@@ -9,10 +9,6 @@ export default function IslandsGrid({ island, curRow, curCol, marked }) {
 	const boardRef = useRef(null);
 
 	useEffect(() => {
-		console.log('marked <>', marked);
-	}, [marked.length]);
-
-	useEffect(() => {
 		if (boardRef.current) {
 			const { offsetWidth, offsetHeight } = boardRef.current;
 			setDimensions({ width: offsetWidth, height: offsetHeight });

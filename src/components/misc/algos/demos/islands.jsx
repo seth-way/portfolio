@@ -150,13 +150,11 @@ export default function IslandsDemo() {
 	}
 
 	function handlePlay() {
-		console.log('handling play');
 		animations.play();
 		setAnimationState('play');
 	}
 
 	function handlePause() {
-		console.log('handling pause');
 		animations.pause();
 		setAnimationState('pause');
 	}
