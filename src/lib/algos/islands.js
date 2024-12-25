@@ -1,3 +1,8 @@
+// PROMPT:
+// <>  Count distinct 'islands' in a 2D matrix where 1's represent land and 0's water.
+// <>  Cells are considered connected if they are adjacent horizontally or vertically.
+// <>  Assume the entire matrix is surrounded by water.
+
 // PROCESS:
 //  IOCE ->
 // <>  Inputs: 2d matrix, all members 1's or 0's
