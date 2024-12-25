@@ -7,7 +7,7 @@ const problems = {
 		prompt: [
 			"Place 'n' queens on an 'n' x 'n' chessboard such that no two queens threaten each other.",
 			'Queens can attack vertically, horizontally, or diagonally.',
-			'Find at least one valid arrangement'
+			'Find at least one valid arrangement.'
 		],
 		Demo: nQueens
 	},

@@ -12,6 +12,7 @@ import {
 	DropdownMenuSeparator,
 	DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 
 const islands = [
 	// Complex Cluster
@@ -84,7 +85,7 @@ const islands = [
 
 const ANIMATION_INTERVAL = 400;
 
-export default function IslandsDemo() {
+export default function IslandsDemo({ show }) {
 	const [islandIdx, setIslandIdx] = useState(0);
 	const [grid, setGrid] = useState(deepCopy(islands[islandIdx]));
 	const [currentPos, setCurrentPos] = useState({ row: -1, col: -1 });
@@ -94,13 +95,15 @@ export default function IslandsDemo() {
 	const animations = useAlgoAnimation(ANIMATION_INTERVAL);
 
 	useEffect(() => {
-		const newIsland = deepCopy(islands[islandIdx]);
-		setGrid(newIsland);
-		setMarked(0);
-		setIslandCount(0);
-		animations.reset();
-		countIslands(newIsland);
-	}, [islandIdx]);
+		if (show) {
+			const newIsland = deepCopy(islands[islandIdx]);
+			setGrid(newIsland);
+			setMarked(0);
+			setIslandCount(0);
+			animations.reset();
+			countIslands(newIsland);
+		}
+	}, [islandIdx, show]);
 
 	function countIslands(grid) {
 		const gridCopy = deepCopy(grid);
@@ -185,8 +188,8 @@ export default function IslandsDemo() {
 						<DropdownMenuTrigger asChild>
 							<Button variant="ghost" className="p-1">{`Grid: ${islandIdx + 1}`}</Button>
 						</DropdownMenuTrigger>
-						<DropdownMenuContent className="w-56">
-							<DropdownMenuLabel>Ex. Grid</DropdownMenuLabel>
+						<DropdownMenuContent side="left" sideOffset={-54} className="min-w-20 w-20">
+							<DropdownMenuLabel className="text-wrap text-center">Choose Grid</DropdownMenuLabel>
 							<DropdownMenuSeparator />
 							<DropdownMenuRadioGroup value={islandIdx} onValueChange={handleIslandChange}>
 								{islands.map((_, i) => (
@@ -197,13 +200,36 @@ export default function IslandsDemo() {
 							</DropdownMenuRadioGroup>
 						</DropdownMenuContent>
 					</DropdownMenu>
-					{animationState === 'play' ? (
-						<CirclePause onClick={handlePause} />
-					) : animationState === 'pause' ? (
-						<CirclePlay onClick={handlePlay} />
-					) : (
-						<RotateCcw onClick={handleRewind} />
-					)}
+					<Tooltip>
+						{animationState === 'play' ? (
+							<>
+								<TooltipTrigger>
+									<CirclePause onClick={handlePause} />
+								</TooltipTrigger>
+								<TooltipContent>
+									<p>pause</p>
+								</TooltipContent>
+							</>
+						) : animationState === 'pause' ? (
+							<>
+								<TooltipTrigger>
+									<CirclePlay onClick={handlePlay} />
+								</TooltipTrigger>
+								<TooltipContent>
+									<p>play</p>
+								</TooltipContent>
+							</>
+						) : (
+							<>
+								<TooltipTrigger>
+									<RotateCcw onClick={handleRewind} />
+								</TooltipTrigger>
+								<TooltipContent>
+									<p>restart</p>
+								</TooltipContent>
+							</>
+						)}
+					</Tooltip>
 				</div>
 			</div>
 			<div className="h-[10%]">
