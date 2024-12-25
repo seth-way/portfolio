@@ -6,6 +6,8 @@ export function useAlgoAnimation(interval) {
 	const id = useRef(null);
 
 	function play() {
+		if (id.current) clearInterval(id.current);
+
 		const intervalId = setInterval(() => {
 			if (animations.current && idxRef.current >= animations.current.length) {
 				idxRef.current = 0;
@@ -38,6 +40,7 @@ export function useAlgoAnimation(interval) {
 	function reset() {
 		animations.current = [];
 		idxRef.current = 0;
+		if (id.current) clearInterval(id.current);
 	}
 
 	useEffect(() => {

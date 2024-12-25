@@ -9,7 +9,7 @@ import LetterQ from '@/components/misc/svgs/LetterQ';
 
 import problems from '@/components/misc/algos/problems';
 
-import { Crown, TreePalm } from 'lucide-react';
+import { Braces, Crown, TreePalm } from 'lucide-react';
 
 const title = ['I find complex logic puzzles', 'deeply fulfilling. 🧠'];
 
@@ -40,19 +40,29 @@ export default function Algorithms() {
 		e.stopPropagation();
 		const id = e.currentTarget.id;
 		const isLeftTab = leftTabs.some(tab => tab.id === id);
-		if (isLeftTab) setActiveLeft(id);
-		else setActiveRight(id);
+		if (isLeftTab) {
+			if (id === 'algo-C') {
+				const algo = activeRight.split('-')[1];
+				const algoURL = `https://github.com/seth-way/portfolio/blob/main/src/lib/algos/${algo}.js`;
+				window.open(algoURL, '_blank', 'noopener,noreferrer');
+			} else setActiveLeft(id);
+		} else {
+			setActiveRight(id);
+		}
 	};
 
 	const leftTabs = [
-		{ id: 'algo-Q', Icon: LetterQ },
-		{ id: 'algo-A', Icon: LetterA }
+		{ id: 'algo-Q', Icon: LetterQ, tooltip: 'Algorithm Prompt' },
+		{ id: 'algo-A', Icon: LetterA, tooltip: 'Algorithm Solution' },
+		{ id: 'algo-C', Icon: Braces, tooltip: 'See the Code' }
 	];
 
 	const rightTabs = [
-		{ id: 'algo-nQueens', Icon: Crown },
-		{ id: 'algo-islands', Icon: TreePalm }
+		{ id: 'algo-nQueens', Icon: Crown, tooltip: 'N Queens' },
+		{ id: 'algo-islands', Icon: TreePalm, tooltip: 'Islands' }
 	];
+
+	const solutionPaths = { 'algo-nQueens': '', 'algo-islands': '' };
 
 	const view = activeLeft.split('-')[1];
 	const problemKey = activeRight.split('-')[1];

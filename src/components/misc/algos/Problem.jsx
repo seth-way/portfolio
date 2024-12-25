@@ -28,7 +28,7 @@ export default function Problem({ problem, view }) {
 				animate={view === 'A' ? { y: '0%' } : { y: '100%' }}
 				transition={transition}
 				className="absolute inset-0 border-orange-500 flex items-center justify-center overflow-y-auto">
-				<Demo />
+				<Demo show={view === 'A'} />
 			</motion.div>
 		</div>
 	);

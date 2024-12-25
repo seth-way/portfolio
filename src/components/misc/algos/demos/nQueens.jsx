@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { Slider } from '@/components/ui/slider';
 import nQueens from '@/lib/algos/nQueens';
 import NQueensGraphic from '@/components/misc/svgs/NQueens';
@@ -32,7 +32,7 @@ export default function QueensDemo() {
 				<h3>{`n: ${tempN}`}</h3>
 			</div>
 			<div className="h-[15%] w-[80%] flex items-end justify-center">
-				<Slider value={[tempN]} max={25} step={1} onValueChange={handleChange} />
+				<Slider value={[tempN]} max={25} step={1} onValueChange={handleChange} tooltip="adjust n" />
 			</div>
 		</div>
 	);
