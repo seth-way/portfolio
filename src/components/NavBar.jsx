@@ -59,10 +59,12 @@ export default function NavBar() {
 	}, [width]);
 
 	const handleClick = e => {
-		console.log(e.currentTarget.value);
 		const id = e.currentTarget.value;
 		const element = document.getElementById(id);
-		if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		if (element) {
+			setIsOpen(false);
+			element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		}
 	};
 
 	return width < breakPoint ? (
