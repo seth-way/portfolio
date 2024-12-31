@@ -34,6 +34,7 @@ export default function RainWaterDemo({ show }) {
 	const [waterTrapped, setWaterTrapped] = useState(0);
 	const [isRaining, setIsRaining] = useState(false);
 	const [waterLevel, setWaterLevel] = useState(-1);
+	const [rotation, setRotation] = useState(0);
 	const isRainingTimeoutRef = useRef(null);
 	const intervalRef = useRef(null);
 
@@ -95,6 +96,7 @@ export default function RainWaterDemo({ show }) {
 
 	function handleClick() {
 		startRainAnimation();
+		setRotation(prev => prev - 360);
 	}
 
 	return (
@@ -132,10 +134,12 @@ export default function RainWaterDemo({ show }) {
 					<Tooltip className="bg-transparent">
 						<TooltipTrigger classNamne="bg-transparent">
 							<motion.div
+								className="bg-transparent"
 								onClick={handleClick}
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.9 }}
-								transition={{ type: 'spring' }}>
+								transition={{ type: 'spring', rotate: { duration: 1, ease: 'easeInOut' } }}
+								animate={{ rotate: rotation }}>
 								<RotateCcw />
 							</motion.div>
 						</TooltipTrigger>
