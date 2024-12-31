@@ -131,7 +131,7 @@ export default function RainWaterDemo({ show }) {
 							</DropdownMenuRadioGroup>
 						</DropdownMenuContent>
 					</DropdownMenu>
-					<Tooltip className="bg-transparent">
+					<Tooltip className="bg-[rgba(0,0,0,0)]">
 						<TooltipTrigger classNamne="bg-card">
 							<motion.div
 								className="bg-card rounded"
