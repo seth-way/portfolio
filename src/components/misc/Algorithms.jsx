@@ -16,7 +16,7 @@ const title = ['I find complex logic puzzles', 'deeply fulfilling. 🧠'];
 export default function Algorithms() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [activeLeft, setActiveLeft] = useState('algo-Q');
-	const [activeRight, setActiveRight] = useState('algo-nQueens');
+	const [activeRight, setActiveRight] = useState('algo-rainWater');
 	const cardRef = useRef(null);
 
 	useEffect(() => {
