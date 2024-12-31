@@ -22,8 +22,8 @@ export default function RainWaterGrid({ elevation, waterElevation, waterLevel, i
 	}, []);
 
 	const squareSize = Math.min(dimensions.height / 13, dimensions.width / 12);
-	console.log('waterLevel', waterLevel);
-	return (
+
+    return (
 		<div ref={gridRef} className="h-full aspect-square relative overflow-hidden">
 			<RainingEffect isRaining={isRaining} width={dimensions.width || 200} />
 			<div
