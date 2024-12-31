@@ -17,7 +17,7 @@ export default function TabGroup({ position, tabs, clickHandler, activeID }) {
 					}
 					onClick={clickHandler}>
 					<Tooltip>
-						<TooltipTrigger>{<Icon />}</TooltipTrigger>
+						<TooltipTrigger className="bg-transparent">{<Icon />}</TooltipTrigger>
 						<TooltipContent>
 							<p>{tooltip}</p>
 						</TooltipContent>
