@@ -132,9 +132,9 @@ export default function RainWaterDemo({ show }) {
 						</DropdownMenuContent>
 					</DropdownMenu>
 					<Tooltip>
-						<TooltipTrigger classNamne="bg-[rgba(0,0,0,0)] rounded-full overflow-hidden">
+						<TooltipTrigger>
 							<motion.div
-								className="bg-card rounded-full"
+								//className="bg-card rounded-full"
 								onClick={handleClick}
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.9 }}
