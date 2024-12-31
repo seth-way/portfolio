@@ -106,7 +106,9 @@ export default function RainWaterDemo({ show }) {
 				<div className="flex flex-col items-center justify-around h-full overflow-hidden">
 					<DropdownMenu>
 						<DropdownMenuTrigger asChild>
-							<Button variant="ghost" className="p-1">{`Grid: ${currentGridIndex + 1}`}</Button>
+							<Button variant="ghost" className="p-1 bg-transparent">{`Grid: ${
+								currentGridIndex + 1
+							}`}</Button>
 						</DropdownMenuTrigger>
 						<DropdownMenuContent side="left" sideOffset={-54} className="min-w-20 w-20">
 							<DropdownMenuLabel className="text-wrap text-center">
@@ -123,7 +125,7 @@ export default function RainWaterDemo({ show }) {
 						</DropdownMenuContent>
 					</DropdownMenu>
 					<Tooltip>
-						<TooltipTrigger>
+						<TooltipTrigger classNamne="bg-transparent">
 							<RotateCcw onClick={startRainAnimation} />
 						</TooltipTrigger>
 						<TooltipContent>
