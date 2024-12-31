@@ -131,10 +131,10 @@ export default function RainWaterDemo({ show }) {
 							</DropdownMenuRadioGroup>
 						</DropdownMenuContent>
 					</DropdownMenu>
-					<Tooltip classNamne="bg-[rbga(0,0,0,0)]">
-						<TooltipTrigger classNamne="bg-[rbga(0,0,0,0)]">
+					<Tooltip>
+						<TooltipTrigger classNamne="bg-card rounded">
 							<motion.div
-								className="bg-[rbga(0,0,0,0)]"
+								//className="bg-[rbga(0,0,0,0)]"
 								onClick={handleClick}
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.9 }}
