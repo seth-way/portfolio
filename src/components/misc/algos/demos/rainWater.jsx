@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import RainWaterGrid from '@/components/misc/svgs/RainWaterGrid';
 import { getMaxReducer, calculateWater } from '@/lib/algos/rainWater';
 import { Button } from '@/components/ui/button';
@@ -92,6 +93,10 @@ export default function RainWaterDemo({ show }) {
 		}, ANIMATION_INTERVAL);
 	}
 
+	function handleClick() {
+		startRainAnimation();
+	}
+
 	return (
 		<div className="w-full h-full p-2 flex flex-col items-center justify-between relative">
 			<div className="h-[85%] w-full relative flex items-stretch justify-evenly">
@@ -126,7 +131,13 @@ export default function RainWaterDemo({ show }) {
 					</DropdownMenu>
 					<Tooltip className="bg-transparent">
 						<TooltipTrigger classNamne="bg-transparent">
-							<RotateCcw onClick={startRainAnimation} color="hsl(var(--foreground))" fill="none" />
+							<motion.div
+								onClick={handleClick}
+								whileHover={{ scale: 1.05 }}
+								whileTap={{ scale: 0.9 }}
+								transition={{ type: 'spring' }}>
+								<RotateCcw />
+							</motion.div>
 						</TooltipTrigger>
 						<TooltipContent>
 							<p>Restart</p>
