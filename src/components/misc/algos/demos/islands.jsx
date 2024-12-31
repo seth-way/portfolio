@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import { CirclePlay, CirclePause, RotateCcw } from 'lucide-react';
 import IslandsGrid from '@/components/misc/svgs/IslandsGrid';
 import { useAlgoAnimation } from '@/lib/hooks/use-algo-animation';
@@ -204,7 +205,13 @@ export default function IslandsDemo({ show }) {
 						{animationState === 'play' ? (
 							<>
 								<TooltipTrigger>
-									<CirclePause onClick={handlePause} />
+									<motion.div
+										onClick={handlePause}
+										whileHover={{ scale: 1.05 }}
+										whileTap={{ scale: 0.9 }}
+										transition={{ type: 'spring' }}>
+										<CirclePause />
+									</motion.div>
 								</TooltipTrigger>
 								<TooltipContent>
 									<p>pause</p>
@@ -213,7 +220,13 @@ export default function IslandsDemo({ show }) {
 						) : animationState === 'pause' ? (
 							<>
 								<TooltipTrigger>
-									<CirclePlay onClick={handlePlay} />
+									<motion.div
+										onClick={handlePlay}
+										whileHover={{ scale: 1.05 }}
+										whileTap={{ scale: 0.9 }}
+										transition={{ type: 'spring' }}>
+										<CirclePlay />
+									</motion.div>
 								</TooltipTrigger>
 								<TooltipContent>
 									<p>play</p>
@@ -222,7 +235,13 @@ export default function IslandsDemo({ show }) {
 						) : (
 							<>
 								<TooltipTrigger>
-									<RotateCcw onClick={handleRewind} />
+									<motion.div
+										onClick={handleRewind}
+										whileHover={{ scale: 1.05 }}
+										whileTap={{ scale: 0.9 }}
+										transition={{ type: 'spring' }}>
+										<RotateCcw />
+									</motion.div>
 								</TooltipTrigger>
 								<TooltipContent>
 									<p>restart</p>

@@ -134,7 +134,6 @@ export default function RainWaterDemo({ show }) {
 					<Tooltip>
 						<TooltipTrigger>
 							<motion.div
-								//className="bg-card rounded-full"
 								onClick={handleClick}
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.9 }}
