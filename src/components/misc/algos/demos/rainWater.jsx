@@ -126,7 +126,7 @@ export default function RainWaterDemo({ show }) {
 					</DropdownMenu>
 					<Tooltip className="bg-transparent">
 						<TooltipTrigger classNamne="bg-transparent">
-							<RotateCcw onClick={startRainAnimation} />
+							<RotateCcw onClick={startRainAnimation} className="bg-transparent" />
 						</TooltipTrigger>
 						<TooltipContent>
 							<p>Restart</p>
