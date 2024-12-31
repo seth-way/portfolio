@@ -1,4 +1,3 @@
-//
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -6,16 +5,16 @@ export default function IslandsGrid({ island, curRow, curCol, marked }) {
 	const [rows, setRows] = useState(8);
 	const [cols, setCols] = useState(8);
 	const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-	const boardRef = useRef(null);
+	const gridRef = useRef(null);
 
 	useEffect(() => {
-		if (boardRef.current) {
-			const { offsetWidth, offsetHeight } = boardRef.current;
+		if (gridRef.current) {
+			const { offsetWidth, offsetHeight } = gridRef.current;
 			setDimensions({ width: offsetWidth, height: offsetHeight });
 		}
 		const handleResize = () => {
-			if (boardRef.current) {
-				const { offsetWidth, offsetHeight } = boardRef.current;
+			if (gridRef.current) {
+				const { offsetWidth, offsetHeight } = gridRef.current;
 				setDimensions({ width: offsetWidth, height: offsetHeight });
 			}
 		};
@@ -34,7 +33,7 @@ export default function IslandsGrid({ island, curRow, curCol, marked }) {
 
 	const squareSize = getSquareSize(dimensions.height, dimensions.width, rows, cols);
 	return (
-		<div ref={boardRef} className="h-full aspect-square relative">
+		<div ref={gridRef} className="h-full aspect-square relative">
 			<div
 				className="absolute top-0 left-0 grid"
 				style={{

@@ -9,14 +9,17 @@ import LetterQ from '@/components/misc/svgs/LetterQ';
 
 import problems from '@/components/misc/algos/problems';
 
-import { Braces, Crown, TreePalm } from 'lucide-react';
+import { Braces, Crown, Droplet, TreePalm } from 'lucide-react';
 
 const title = ['I find complex logic puzzles', 'deeply fulfilling. 🧠'];
 
 export default function Algorithms() {
-	const [isOpen, setIsOpen] = useState(false);
-	const [activeLeft, setActiveLeft] = useState('algo-Q');
-	const [activeRight, setActiveRight] = useState('algo-nQueens');
+	// const [isOpen, setIsOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState(true);
+	// const [activeLeft, setActiveLeft] = useState('algo-Q');
+	const [activeLeft, setActiveLeft] = useState('algo-A');
+	// const [activeRight, setActiveRight] = useState('algo-nQueens');
+	const [activeRight, setActiveRight] = useState('algo-rainWater');
 	const cardRef = useRef(null);
 
 	useEffect(() => {
@@ -59,10 +62,9 @@ export default function Algorithms() {
 
 	const rightTabs = [
 		{ id: 'algo-nQueens', Icon: Crown, tooltip: 'N Queens' },
-		{ id: 'algo-islands', Icon: TreePalm, tooltip: 'Islands' }
+		{ id: 'algo-islands', Icon: TreePalm, tooltip: 'Islands' },
+		{ id: 'algo-rainWater', Icon: Droplet, tooltip: 'Trapping Rain Water' }
 	];
-
-	const solutionPaths = { 'algo-nQueens': '', 'algo-islands': '' };
 
 	const view = activeLeft.split('-')[1];
 	const problemKey = activeRight.split('-')[1];

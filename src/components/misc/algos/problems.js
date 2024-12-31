@@ -1,5 +1,6 @@
 import nQueens from '@/components/misc/algos/demos/nQueens';
 import islands from '@/components/misc/algos/demos/islands';
+import rainWater from '@/components/misc/algos/demos/rainWater';
 
 const problems = {
 	nQueens: {
@@ -19,6 +20,15 @@ const problems = {
 			'Assume the entire matrix is surrounded by water.'
 		],
 		Demo: islands
+	},
+	rainWater: {
+		title: 'Trapping Rain Water',
+		prompt: [
+			'Given an array of non-negative integers, representing a 2-D elevation map...',
+			'Compute how much water it can trap after raining.',
+			'Each integer represents the height of a bar that is 1 unit wide.'
+		],
+		Demo: rainWater
 	}
 };
 

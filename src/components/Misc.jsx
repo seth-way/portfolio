@@ -1,5 +1,5 @@
 import { Card } from '@/components/ui/card';
-import Item from '@/components/misc/misc-item';
+import Item from '@/components/ui/misc-item';
 import Airborne from '@/components/misc/Airborne';
 import Joke from '@/components/misc/Joke';
 import Slideshow from '@/components/misc/Slideshow';
