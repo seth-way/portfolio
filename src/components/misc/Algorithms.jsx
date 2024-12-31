@@ -9,7 +9,7 @@ import LetterQ from '@/components/misc/svgs/LetterQ';
 
 import problems from '@/components/misc/algos/problems';
 
-import { Braces, Crown, TreePalm } from 'lucide-react';
+import { Braces, Crown, Droplet, TreePalm } from 'lucide-react';
 
 const title = ['I find complex logic puzzles', 'deeply fulfilling. 🧠'];
 
@@ -58,11 +58,10 @@ export default function Algorithms() {
 	];
 
 	const rightTabs = [
+		{ id: 'algo-rainWater', Icon: Droplet, tooltip: 'Trapping Rain Water' },
 		{ id: 'algo-nQueens', Icon: Crown, tooltip: 'N Queens' },
 		{ id: 'algo-islands', Icon: TreePalm, tooltip: 'Islands' }
 	];
-
-	const solutionPaths = { 'algo-nQueens': '', 'algo-islands': '' };
 
 	const view = activeLeft.split('-')[1];
 	const problemKey = activeRight.split('-')[1];

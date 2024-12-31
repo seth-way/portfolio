@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Frame from '@/components/misc/spring-frame';
+import Frame from '@/components/ui/spring-frame';
 import Punchline from './Punchline';
 import { motion } from 'framer-motion';
 
