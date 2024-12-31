@@ -3,7 +3,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip
 export default function TabGroup({ position, tabs, clickHandler, activeID }) {
 	const activeTabClass =
 		' border-0 bg-background/40' + (position === 'left' ? ' text-primary_C' : ' text-secondary_C ');
-	const defaultTabClass = ' text-foreground/40';
+	const defaultTabClass = ' text-foreground/40 bg-transparent';
 
 	return (
 		<div className="h-full w-[12%] flex flex-col">
