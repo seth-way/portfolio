@@ -132,9 +132,9 @@ export default function RainWaterDemo({ show }) {
 						</DropdownMenuContent>
 					</DropdownMenu>
 					<Tooltip>
-						<TooltipTrigger classNamne="bg-card/0">
+						<TooltipTrigger classNamne="bg-[rbga(0,0,0,0)]">
 							<motion.div
-								className="bg-card/0"
+								className="bg-[rbga(0,0,0,0)]"
 								onClick={handleClick}
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.9 }}
