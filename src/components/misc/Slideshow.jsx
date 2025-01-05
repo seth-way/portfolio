@@ -109,7 +109,7 @@ const Slideshow = () => {
     >
       <div className='absolute inset-0 flex flex-col items-center justify-center gap-2 select-none'>
         <h3 className='text-lg max-w-[80%]'>
-          Bear-Doggy is the goodest of good boys! ❤️ 🐾
+          Bear-Doggy is my best pal and the goodest of good boys! ❤️ 🐾
         </h3>
       </div>
       <motion.div
