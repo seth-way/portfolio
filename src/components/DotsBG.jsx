@@ -1,35 +1,110 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { useWindowSize } from '@react-hook/window-size/throttled';
 import Dot from '@/components/Dot';
 
-const SQUARE_SIZE = 20;
+const SQUARE_SIZE = 22;
+const MIN_DIST = 10;
+const MID_DIST = 100;
+const MAX_DIST = 130;
+const DEFAULT_DOT = { deltaX: 0, deltaY: 0, scale: 1 };
 
-export default function DotsBG({ x, y }) {
-	const [numRows, setNumRows] = useState(0);
-	const [numCols, setNumCols] = useState(0);
-	const [height, width] = useWindowSize();
-	const bgRef = useRef(null);
+export default function DotsBG({ cursorPos }) {
+  const [grid, setGrid] = useState({ rows: 0, cols: 0 });
+  const [dotLocations, setDotLocations] = useState([]);
+  const bgRef = useRef(null);
+  const [height, width] = useWindowSize();
 
-	useEffect(() => {
-		if (bgRef.current) {
-			const rect = bgRef.current.getBoundingClientRect();
-			setNumRows(Math.round(rect.height / SQUARE_SIZE));
-			setNumCols(Math.round(rect.width / SQUARE_SIZE));
-		}
-	}, [height, width]);
+  useEffect(() => {
+    if (bgRef.current) {
+      const { height, width } = bgRef.current.getBoundingClientRect();
+      setGrid({
+        rows: Math.round(height / SQUARE_SIZE),
+        cols: Math.round(width / SQUARE_SIZE),
+      });
+    }
+  }, [height, width]);
 
-	return (
-		<div
-			ref={bgRef}
-			className="absolute inset-0"
-			style={{
-				display: 'grid',
-				gridTemplateRows: `repeat(${numRows}, 1fr)`,
-				gridTemplateColumns: `repeat(${numCols}, 1fr)`
-			}}>
-			{Array.from({ length: numRows * numCols }).map((_, index) => (
-				<Dot x={x} y={y} key={`dot-${index}`} />
-			))}
-		</div>
-	);
+  useEffect(() => {
+    if (bgRef.current) {
+      const { height, width, left, top } =
+        bgRef.current.getBoundingClientRect();
+      const locations = [];
+
+      for (let row = 0; row < grid.rows; row++) {
+        for (let col = 0; col < grid.cols; col++) {
+          locations.push({
+            x: (col + 0.5) * (width / grid.cols) + left,
+            y: (row + 0.5) * (height / grid.rows) + top,
+          });
+        }
+      }
+      setDotLocations(locations);
+    }
+  }, [grid]);
+
+  const dots = useMemo(() => {
+    if (!cursorPos) {
+      return dotLocations.map(() => DEFAULT_DOT);
+    }
+
+    return dotLocations.map(({ x, y }) => {
+      const dx = cursorPos.x - x;
+      const dy = cursorPos.y - y;
+
+      return animateDot(dx, dy);
+    });
+  }, [cursorPos, dotLocations]);
+
+  function animateDot(dx, dy) {
+    const dist = Math.sqrt(dx ** 2 + dy ** 2);
+
+    if (dist < MAX_DIST) {
+      let deltaX = 0;
+      let deltaY = 0;
+      const scale = ((MAX_DIST - dist) / MAX_DIST) * 5;
+
+      if (dist > MIN_DIST) {
+        const angle = Math.atan2(dy, dx);
+        let strength, scaleFactor;
+        if (dist < MID_DIST) {
+          scaleFactor = -20;
+          strength = (MID_DIST - dist) / MID_DIST;
+        } else {
+          scaleFactor = 20;
+          strength = (dist - MID_DIST) / (MAX_DIST - MID_DIST);
+        }
+        deltaX = Math.cos(angle) * strength * scaleFactor;
+        deltaY = Math.sin(angle) * strength * scaleFactor;
+      }
+
+      return {
+        deltaX,
+        deltaY,
+        scale,
+      };
+    }
+
+    return DEFAULT_DOT;
+  }
+
+  return (
+    <div
+      ref={bgRef}
+      className='absolute inset-0'
+      style={{
+        display: 'grid',
+        gridTemplateRows: `repeat(${grid.rows}, 1fr)`,
+        gridTemplateColumns: `repeat(${grid.cols}, 1fr)`,
+      }}
+    >
+      {dots.map(({ deltaX, deltaY, scale }, index) => (
+        <Dot
+          key={'dot-' + index}
+          deltaX={deltaX}
+          deltaY={deltaY}
+          scale={scale}
+        />
+      ))}
+    </div>
+  );
 }

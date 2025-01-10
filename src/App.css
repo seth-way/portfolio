@@ -132,7 +132,6 @@
   }
 }
 
-,
 @media (prefers-reduced-motion: no-preference) {
   .triangle-svg > *:nth-child(1) {
     animation: 1s fader var(--delay) ease-in-out alternate infinite;
