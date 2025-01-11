@@ -48,11 +48,11 @@ const Footer = () => {
               animate={{ x: 0, y: 0, opacity: 1, scale: 1 }}
               exit={{ x: 200, y: -50, opacity: 0, scale: 0.3 }}
               transition={{ ease: 'backInOut', duration: 0.65 }}
-              className='flex items-center gap-2 text-sm py-1 px-2 h-full'
+              className='flex items-center gap-2 text-sm py-1 px-2 h-full leading-relaxed'
             >
               <p>
                 <a
-                  className='text-primary_C border p-2 rounded-full'
+                  className='text-primary_C border px-2 py-1 rounded-full'
                   href='https://motion.dev/'
                   target='_blank'
                   rel='noopener noreferrer'

@@ -59,6 +59,15 @@ export default function ProfilePic() {
           clipPath='url(#circleClip)'
           preserveAspectRatio='xMidYMid slice'
         ></image>
+        <circle
+          cx='150'
+          cy='150'
+          r='140'
+          stroke='currentColor'
+          fill='none'
+          strokeWidth='12'
+          opacity={0.3}
+        />
       </svg>
       <motion.div className='absolute inset-0' style={{ rotate: rotation1 }}>
         <svg
