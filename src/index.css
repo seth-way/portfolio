@@ -86,6 +86,8 @@ body {
     --radius: 0.5rem;
     --primary_C: var(--red);
     --secondary_C: var(--blue);
+    --accent_C: var(--green);
+    --alt_C: var(--purple);
   }
   .dark {
     --background: 240 10% 3.9%;
@@ -114,6 +116,8 @@ body {
     --chart-5: 340 75% 55%;
     --primary_C: var(--yellow);
     --secondary_C: var(--pink);
+    --accent_C: var(--blue);
+    --alt_C: var(--green);
   }
 }
 

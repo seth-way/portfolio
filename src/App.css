@@ -75,7 +75,7 @@
       width: 100%;
       aspect-ratio: 1 / 1;
     }
-
+    /* 
     #profile-pic-border {
       position: relative;
       width: min(50vh, 60vw);
@@ -110,7 +110,7 @@
         transparent calc(100% - var(--pic-border)),
         #fff calc(100% - var(--pic-border) + 1px)
       );
-    }
+    } */
   }
 }
 

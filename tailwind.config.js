@@ -46,6 +46,12 @@ export default {
         secondary_C: {
           DEFAULT: 'var(--secondary_C)',
         },
+        accent_C: {
+          DEFAULT: 'var(--accent_C)',
+        },
+        alt_C: {
+          DEFAULT: 'var(--alt_C)',
+        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
