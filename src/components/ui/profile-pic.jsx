@@ -75,11 +75,11 @@ export default function ProfilePic() {
               />
               <stop
                 offset='45%'
-                style={{ stopColor: 'var(--alt_C)', stopOpacity: 1 }}
+                style={{ stopColor: 'var(--alt_C)', stopOpacity: 0.75 }}
               />
               <stop
                 offset='100%'
-                style={{ stopColor: 'var(--alt_C)', stopOpacity: 1 }}
+                style={{ stopColor: 'var(--alt_C)', stopOpacity: 0.75 }}
               />
             </linearGradient>
           </defs>
@@ -103,11 +103,11 @@ export default function ProfilePic() {
             <linearGradient id='grad2' x1='0' y1='0' x2='0' y2='1'>
               <stop
                 offset='0%'
-                style={{ stopColor: 'var(--accent_C)', stopOpacity: 1 }}
+                style={{ stopColor: 'var(--accent_C)', stopOpacity: 0.75 }}
               />
               <stop
                 offset='20%'
-                style={{ stopColor: 'var(--accent_C)', stopOpacity: 1 }}
+                style={{ stopColor: 'var(--accent_C)', stopOpacity: 0.75 }}
               />
               <stop
                 offset='100%'
@@ -139,11 +139,11 @@ export default function ProfilePic() {
               />
               <stop
                 offset='20%'
-                style={{ stopColor: 'var(--primary_C)', stopOpacity: 1 }}
+                style={{ stopColor: 'var(--primary_C)', stopOpacity: 0.75 }}
               />
               <stop
                 offset='100%'
-                style={{ stopColor: 'var(--primary_C)', stopOpacity: 1 }}
+                style={{ stopColor: 'var(--primary_C)', stopOpacity: 0.75 }}
               />
             </linearGradient>
           </defs>
@@ -168,7 +168,7 @@ export default function ProfilePic() {
             <radialGradient id='grad4' cx='0.9' cy='0.9' r='0.7'>
               <stop
                 offset='0%'
-                style={{ stopColor: 'var(--secondary_C)', stopOpacity: 1 }}
+                style={{ stopColor: 'var(--secondary_C)', stopOpacity: 0.75 }}
               />
               <stop
                 offset='100%'
