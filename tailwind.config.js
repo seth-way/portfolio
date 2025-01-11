@@ -4,6 +4,7 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      screens: { touch: { raw: '(hover: none) and (pointer: coarse)' } },
       fontFamily: {
         capriola: ['Capriola', 'sans-serif'],
       },
@@ -91,6 +92,9 @@ export default {
     animation: {
       expand: 'expand 1s ease-in-out forwards',
     },
+  },
+  variants: {
+    extend: { pointerEvents: ['touch'] },
   },
   plugins: [
     require('tailwindcss-animate'),

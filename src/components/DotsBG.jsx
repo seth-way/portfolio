@@ -100,7 +100,7 @@ export default function DotsBG() {
   return (
     <div
       ref={bgRef}
-      className='absolute inset-0 pointer-events-auto'
+      className='absolute inset-0 pointer-events-auto touch:pointer-events-none'
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{
