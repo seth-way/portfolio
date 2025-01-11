@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import JokeSVG from '@/components/misc/svgs/JokeSVG';
 
 const variants = {

@@ -1,5 +1,5 @@
 import { useRef, memo } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 const Dot = memo(({ deltaX, deltaY, scale }) => {
   const delay = useRef(Math.random() + 0.01);

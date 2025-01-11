@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 const FALL_DUR = 4.5;
 const LAND_DUR = 1.5;

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import Logo82nd from '@/components/misc/svgs/82nd';
 import Logo173rd from '@/components/misc/svgs/173rd';
 
@@ -77,7 +77,10 @@ const Clouds = ({ isOpen, jumps }) => {
           <Logo82nd />
           <Logo173rd />
         </div>
-        <p className='text-ring'><span className="text-secondary_C">{jumps}</span> perfectly good airplanes</p>
+        <p className='text-ring'>
+          <span className='text-secondary_C'>{jumps}</span> perfectly good
+          airplanes
+        </p>
       </motion.div>
       <motion.svg
         initial='closed'

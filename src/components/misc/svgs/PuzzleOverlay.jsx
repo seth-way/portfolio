@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 const PuzzleOverlay = ({ title, isOpen }) => {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
