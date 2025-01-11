@@ -27,15 +27,14 @@ export default function DotsBG() {
 
   useEffect(() => {
     if (bgRef.current) {
-      const { height, width, left, top } =
-        bgRef.current.getBoundingClientRect();
+      const { height, width } = bgRef.current.getBoundingClientRect();
       const locations = [];
 
       for (let row = 0; row < grid.rows; row++) {
         for (let col = 0; col < grid.cols; col++) {
           locations.push({
-            x: (col + 0.5) * (width / grid.cols) + left,
-            y: (row + 0.5) * (height / grid.rows) + top,
+            x: (col + 0.5) * (width / grid.cols), // this ref shouldnt include top or left bc it changes when scrolled... will have to calculate later.
+            y: (row + 0.5) * (height / grid.rows),
           });
         }
       }
@@ -48,9 +47,11 @@ export default function DotsBG() {
       return dotLocations.map(() => DEFAULT_DOT);
     }
 
+    const { left, top } = bgRef.current.getBoundingClientRect();
+
     return dotLocations.map(({ x, y }) => {
-      const dx = cursorPos.x - x;
-      const dy = cursorPos.y - y;
+      const dx = cursorPos.x - left - x;
+      const dy = cursorPos.y - top - y;
 
       return animateDot(dx, dy);
     });
