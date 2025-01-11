@@ -7,7 +7,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@/components/ui/collapsible';
-import { useAnimate, stagger } from 'framer-motion';
+import { useAnimate, stagger } from 'motion/react';
 import useWindowSize from '@/lib/hooks/use-window-size';
 
 const links = ['home', 'about', 'skills', 'projects', 'mini·apps'];

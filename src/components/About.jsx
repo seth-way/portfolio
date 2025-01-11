@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import ProfilePic from '@/components/ui/profile-pic';
 import headShot from '@/assets/images/headShot.jpg';
 import background from '@/assets/resume-info/background.json';
 import resume from '@/assets/resume.pdf';
@@ -41,12 +42,7 @@ const About = () => {
       ref={ref}
     >
       <div className='flex flex-col md:flex-row items-center gap-8'>
-        <div
-          id='profile-pic-border'
-          className='w-[min(50vh,50vw)] min-w-124 max-w-80'
-        >
-          <img id='profile-pic' src={headShot} alt='headshot of dev' />
-        </div>
+        <ProfilePic />
         <section
           id='about-me-bio'
           className='flex flex-col items-center gap-2 [&_b]:text-blue-500'

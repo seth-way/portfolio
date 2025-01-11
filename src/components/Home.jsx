@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import Headline from '@/components/Headline';
 import TriangleBG from '@/components/TriangleBG';
 import { Card } from '@/components/ui/card';

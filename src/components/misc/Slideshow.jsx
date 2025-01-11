@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { PlayCircle, PauseCircle } from 'lucide-react';
 import Paw from '@/components/misc/svgs/Paw';
 import Bars from '@/components/misc/transitions/Bars';

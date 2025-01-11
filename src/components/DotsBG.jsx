@@ -8,7 +8,8 @@ const MID_DIST = 100;
 const MAX_DIST = 130;
 const DEFAULT_DOT = { deltaX: 0, deltaY: 0, scale: 1 };
 
-export default function DotsBG({ cursorPos }) {
+export default function DotsBG() {
+  const [cursorPos, setCursorPos] = useState(null);
   const [grid, setGrid] = useState({ rows: 0, cols: 0 });
   const [dotLocations, setDotLocations] = useState([]);
   const bgRef = useRef(null);
@@ -53,7 +54,7 @@ export default function DotsBG({ cursorPos }) {
 
       return animateDot(dx, dy);
     });
-  }, [cursorPos, dotLocations]);
+  }, [cursorPos?.x, cursorPos?.y, dotLocations]);
 
   function animateDot(dx, dy) {
     const dist = Math.sqrt(dx ** 2 + dy ** 2);
@@ -87,10 +88,20 @@ export default function DotsBG({ cursorPos }) {
     return DEFAULT_DOT;
   }
 
+  const handleMouseMove = event => {
+    setCursorPos({ x: event.clientX, y: event.clientY });
+  };
+
+  const handleMouseLeave = () => {
+    setCursorPos(null);
+  };
+
   return (
     <div
       ref={bgRef}
-      className='absolute inset-0'
+      className='absolute inset-0 pointer-events-auto'
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
       style={{
         display: 'grid',
         gridTemplateRows: `repeat(${grid.rows}, 1fr)`,

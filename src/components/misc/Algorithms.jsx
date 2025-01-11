@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import PuzzleOverlay from '@/components/misc/svgs/PuzzleOverlay';
 import TabGroup from '@/components/misc/algos/TabGroup';
 import Problem from '@/components/misc/algos/Problem';
