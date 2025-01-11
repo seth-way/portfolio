@@ -37,32 +37,44 @@ const Footer = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ ease: 'backInOut', duration: 0.65 }}
-              className='border py-1 px-2 rounded-full'
+              className='border py-1 px-2 rounded-full h-full'
             >
               <strong>🤔 Did you know?</strong>
             </motion.div>
           ) : (
-            <motion.p
+            <motion.div
               key='footer-link'
               initial={{ x: 200, y: -50, opacity: 0, scale: 0.3 }}
               animate={{ x: 0, y: 0, opacity: 1, scale: 1 }}
               exit={{ x: 200, y: -50, opacity: 0, scale: 0.3 }}
               transition={{ ease: 'backInOut', duration: 0.65 }}
-              className='mt-2 text-sm'
+              className='flex items-center gap-2 text-sm py-1 px-2 h-full'
             >
-              <motion.a
-                className='text-primary_C border p-2 rounded-full'
-                href='https://motion.dev/'
-                target='_blank'
-                rel='noopener noreferrer'
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={e => e.stopPropagation()}
-              >
-                Motion for React
-              </motion.a>{' '}
-              is the only animation library used on this page!
-            </motion.p>
+              <p>
+                <a
+                  className='text-primary_C border p-2 rounded-full'
+                  href='https://motion.dev/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  onClick={e => e.stopPropagation()}
+                >
+                  Motion for React
+                </a>{' '}
+                is the only animation library used on this page!
+              </p>
+              <picture>
+                <source
+                  srcset='https://fonts.gstatic.com/s/e/notoemoji/latest/1f92f/512.webp'
+                  type='image/webp'
+                />
+                <img
+                  src='https://fonts.gstatic.com/s/e/notoemoji/latest/1f92f/512.gif'
+                  alt='🤯'
+                  width='32'
+                  height='32'
+                />
+              </picture>
+            </motion.div>
           )}
         </AnimatePresence>
       </div>
