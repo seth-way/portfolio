@@ -18,7 +18,7 @@ const Minis = () => {
       <h2 className='z-20 p-2 bg-background/10 backdrop-blur-sm rounded-lg pointer-events-none'>
         Mini Apps
       </h2>
-      <div className='flex items-center overflow-x-scroll md:overflow-x-auto overflow-y-hidden md:justify-center md:flex-wrap max-w-full gap-4 p-4 z-20 pointer-events-none'>
+      <div className='flex items-center overflow-x-scroll md:overflow-x-auto overflow-y-hidden md:justify-center md:flex-wrap max-w-full gap-4 p-4 z-20 md:pointer-events-none'>
         {items.map((item, idx) => (
           <Item key={`minis-${idx}`}>{item}</Item>
         ))}
