@@ -5,7 +5,6 @@ import AirborneOp from '@/components/misc/svgs/AirborneOp';
 const TOTAL_JUMPS = 43;
 
 const Airborne = ({ active }) => {
-	const [isOpen, setIsOpen] = useState(false);
 	const [bgColor, setBgColor] = useState('bg-transparent');
 
 	const id = 'mini-airborne';
@@ -40,9 +39,8 @@ const Airborne = ({ active }) => {
 				if (currentIndex >= colors.length) {
 					clearInterval(intervalId);
 				}
-			}, Math.random() * 75 + 95); // 0.2 seconds per color
+			}, Math.random() * 75 + 95);
 
-			// Schedule the next flash after a random delay
 			const nextFlash = Math.random() * 4000 + 4000;
 			timeoutId = setTimeout(flashBackground, nextFlash);
 		};
@@ -50,8 +48,8 @@ const Airborne = ({ active }) => {
 		flashBackground();
 
 		return () => {
-			clearTimeout(timeoutId); // Clear the timeout when unmounting
-			clearInterval(intervalId); // Clear any active interval
+			clearTimeout(timeoutId);
+			clearInterval(intervalId);
 		};
 	}, [active]);
 

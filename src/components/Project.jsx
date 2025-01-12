@@ -1,9 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
-import Img from '@/components/ui/img';
+import { useRef } from 'react';
 import {
 	Card,
 	CardFooter,
-	CardContent,
 	CardDescription,
 	CardHeader,
 	CardTitle

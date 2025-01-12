@@ -33,7 +33,7 @@ export default function DotsBG() {
       for (let row = 0; row < grid.rows; row++) {
         for (let col = 0; col < grid.cols; col++) {
           locations.push({
-            x: (col + 0.5) * (width / grid.cols), // this ref shouldnt include top or left bc it changes when scrolled... will have to calculate later.
+            x: (col + 0.5) * (width / grid.cols),
             y: (row + 0.5) * (height / grid.rows),
           });
         }

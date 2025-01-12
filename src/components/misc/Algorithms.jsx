@@ -1,14 +1,11 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { motion } from 'motion/react';
 import PuzzleOverlay from '@/components/misc/svgs/PuzzleOverlay';
 import TabGroup from '@/components/misc/algos/TabGroup';
 import Problem from '@/components/misc/algos/Problem';
-
 import LetterA from '@/components/misc/svgs/LetterA';
 import LetterQ from '@/components/misc/svgs/LetterQ';
-
 import problems from '@/components/misc/algos/problems';
-
 import { Braces, Crown, Droplet, TreePalm } from 'lucide-react';
 
 const title = ['I find complex logic puzzles', 'deeply fulfilling. 🧠'];

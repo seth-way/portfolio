@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 import ProfilePic from '@/components/ui/profile-pic';
-import headShot from '@/assets/images/headShot.jpg';
 import background from '@/assets/resume-info/background.json';
 import resume from '@/assets/resume.pdf';
 const { fullName, bio, email, phone, address } = background;
@@ -54,7 +53,6 @@ const About = () => {
               className='max-w-sm'
               dangerouslySetInnerHTML={{ __html: bioSection }}
             >
-              {/*bioSection*/}
             </p>
           ))}
         </section>
