@@ -1,4 +1,4 @@
-export default function LetterQ({ color }) {
+export default function LetterQ() {
 	return (
 		<svg
 			version="1.0"

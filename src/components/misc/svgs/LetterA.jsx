@@ -1,4 +1,4 @@
-export default function LetterA({ color }) {
+export default function LetterA() {
 	return (
 		<svg
 			version="1.0"

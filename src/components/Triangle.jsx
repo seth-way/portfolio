@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 const Triangle = ({ width, height, depth = 0 }) => {
 	const ref = useRef(null);

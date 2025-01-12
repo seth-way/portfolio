@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { motion } from 'motion/react';
 
 const Paw = ({ location, variant, fade }) => {

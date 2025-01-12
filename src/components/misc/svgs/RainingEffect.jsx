@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import { motion } from 'motion/react';
 
 const ANGLE = 3;
