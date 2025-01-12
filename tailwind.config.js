@@ -85,13 +85,7 @@ export default {
       dropShadow: {
         dark: '0px 0px 3px rgba(5, 5, 5, 0.95)',
       },
-    },
-    keyframes: {
-      expand: { '0%': { width: '0%' }, '100%': { width: '100%' } },
-    },
-    animation: {
-      expand: 'expand 1s ease-in-out forwards',
-    },
+    }
   },
   variants: {
     extend: { pointerEvents: ['touch'] },
