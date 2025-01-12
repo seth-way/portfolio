@@ -6,7 +6,7 @@ const Logo82nd = () => (
 		xmlnsXlink="http://www.w3.org/1999/xlink"
 		preserveAspectRatio="xMidYMid meet"
 		viewBox="0 0 290 405"
-		height="100%">
+		height="100">
 		<path d="M0,117h285v285h-285z" fill="#d90000" />
 		<circle cx="142.9" cy="258.2" r="110.2" fill="#0f1177" />
 		<path
