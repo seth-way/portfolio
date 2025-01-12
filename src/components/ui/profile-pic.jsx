@@ -18,7 +18,7 @@ export default function ProfilePic() {
     mass: 0.6,
   });
 
-  const rotation2R = useTransform(rotation2, value => -value);
+  const rotation2R = useTransform(rotation2, value => -0.9 * value);
 
   const rotation3 = useSpring(scrollY, {
     stiffness: 500,
