@@ -56,8 +56,7 @@ const variants = {
 };
 
 const Clouds = ({ isOpen, jumps }) => {
-  //const [variant, setVariant] = useState('closed');
-  const [variant, setVariant] = useState('open');
+  const [variant, setVariant] = useState('closed');
 
   useEffect(() => {
     if (isOpen) setVariant('open');

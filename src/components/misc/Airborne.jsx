@@ -4,12 +4,14 @@ import AirborneOp from '@/components/misc/svgs/AirborneOp';
 
 const TOTAL_JUMPS = 43;
 
-const Airborne = () => {
+const Airborne = ({ active }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [bgColor, setBgColor] = useState('bg-transparent');
 
+	const id = 'mini-airborne';
+
 	useEffect(() => {
-		if (!isOpen) {
+		if (active !== id) {
 			setBgColor('bg-transparent');
 			return;
 		}
@@ -51,23 +53,14 @@ const Airborne = () => {
 			clearTimeout(timeoutId); // Clear the timeout when unmounting
 			clearInterval(intervalId); // Clear any active interval
 		};
-	}, [isOpen]);
-
-	const handleOpen = () => {
-		if (!isOpen) setIsOpen(true);
-	};
-
-	const handleClose = e => {
-		e.stopPropagation();
-		setIsOpen(false);
-	};
+	}, [active]);
 
 	return (
 		<div
-			onClick={handleOpen}
+			id={id}
 			className="h-full w-full relative bg-gradient-to-b from-gray-800 via-gray-700 via-80% to-gray-600 overflow-hidden">
-			<Clouds isOpen={isOpen} jumps={TOTAL_JUMPS} />
-			<AirborneOp isOpen={isOpen} handleClose={handleClose} jumps={TOTAL_JUMPS} />
+			<Clouds isOpen={active === id} jumps={TOTAL_JUMPS} />
+			<AirborneOp isOpen={active === id} jumps={TOTAL_JUMPS} />
 			<div className={`absolute inset-0 blur-lg overflow-hidden ${bgColor}`} />
 		</div>
 	);
