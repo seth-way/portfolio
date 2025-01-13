@@ -1,104 +1,113 @@
 #root {
-  width: 100vw;
-  margin: 1vh auto 0 auto;
-  padding: 0;
-  text-align: center;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+	width: 100vw;
+	margin: 1vh auto 0 auto;
+	padding: 0;
+	text-align: center;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
 
-  .section-card {
-    width: min(1280px, 95vw);
+	.section-card {
+		width: min(1280px, 95vw);
 
-    .hex-svg,
-    .triangle-svg,
-    .more-triangles,
-    .no-triangles {
-      color: var(--text_C);
-      flex-shrink: 0;
-      transform-box: fill-box;
-      transform-origin: center;
-    }
+		.hex-svg,
+		.triangle-svg,
+		.more-triangles,
+		.no-triangles {
+			color: var(--text_C);
+			flex-shrink: 0;
+			transform-box: fill-box;
+			transform-origin: center;
+		}
 
-    .triangle-svg > * {
-      opacity: 4%;
-    }
+		.triangle-svg > * {
+			opacity: 4%;
+		}
 
-    .triangle-svg.depth-1 > *:nth-child(even),
-    .triangle-svg.depth-2 > *:nth-child(even) {
-      display: none;
-    }
+		.triangle-svg.depth-1 > *:nth-child(even),
+		.triangle-svg.depth-2 > *:nth-child(even) {
+			display: none;
+		}
 
-    .triangle-svg.depth-2 {
-      > *:nth-child(3),
-      > *:nth-child(7) {
-        display: none;
-      }
-    }
+		.triangle-svg.depth-2 {
+			> *:nth-child(3),
+			> *:nth-child(7) {
+				display: none;
+			}
+		}
 
-    h2 {
-      font-family: 'Rowdies', sans-serif;
-      text-transform: uppercase;
-      font-weight: 900;
-      font-size: 2rem;
-    }
-  }
+		h2 {
+			font-family: 'Rowdies', sans-serif;
+			text-transform: uppercase;
+			font-weight: 900;
+			font-size: 2rem;
+		}
+	}
 }
 
 @keyframes fader {
-  0% {
-    opacity: 8%;
-  }
-  100% {
-    opacity: 3%;
-  }
+	0% {
+		opacity: 8%;
+	}
+	100% {
+		opacity: 3%;
+	}
 }
 
 @keyframes dots {
-  0% {
-    opacity: 50%;
-  }
-  100% {
-    opacity: 10%;
-  }
+	0% {
+		opacity: 50%;
+	}
+	10% {
+		opacity: 40%;
+	}
+	30% {
+		opacity: 20%;
+	}
+	60% {
+		opacity: 7%;
+	}
+	100% {
+		opacity: 0%;
+	}
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .triangle-svg > *:nth-child(1) {
-    animation: 1s fader var(--delay) ease-in-out alternate infinite;
-  }
+	.triangle-svg > *:nth-child(1) {
+		animation: 1s fader var(--delay) ease-in-out alternate infinite;
+	}
 
-  .triangle-svg > *:nth-child(2) {
-    animation: 1s fader calc(var(--delay) + 0.1s) ease-in-out alternate infinite;
-  }
+	.triangle-svg > *:nth-child(2) {
+		animation: 1s fader calc(var(--delay) + 0.1s) ease-in-out alternate infinite;
+	}
 
-  .triangle-svg > *:nth-child(3) {
-    animation: 1s fader calc(var(--delay) + 0.2s) ease-in-out alternate infinite;
-  }
+	.triangle-svg > *:nth-child(3) {
+		animation: 1s fader calc(var(--delay) + 0.2s) ease-in-out alternate infinite;
+	}
 
-  .triangle-svg > *:nth-child(4) {
-    animation: 1s fader calc(var(--delay) + 0.3s) ease-in-out alternate infinite;
-  }
+	.triangle-svg > *:nth-child(4) {
+		animation: 1s fader calc(var(--delay) + 0.3s) ease-in-out alternate infinite;
+	}
 
-  .triangle-svg > *:nth-child(5) {
-    animation: 1s fader calc(var(--delay) + 0.4s) ease-in-out alternate infinite;
-  }
+	.triangle-svg > *:nth-child(5) {
+		animation: 1s fader calc(var(--delay) + 0.4s) ease-in-out alternate infinite;
+	}
 
-  .triangle-svg > *:nth-child(6) {
-    animation: 1s fader calc(var(--delay) + 0.5s) ease-in-out alternate infinite;
-  }
+	.triangle-svg > *:nth-child(6) {
+		animation: 1s fader calc(var(--delay) + 0.5s) ease-in-out alternate infinite;
+	}
 
-  .triangle-svg > *:nth-child(7) {
-    animation: 1s fader calc(var(--delay) + 0.6s) ease-in-out alternate infinite;
-  }
+	.triangle-svg > *:nth-child(7) {
+		animation: 1s fader calc(var(--delay) + 0.6s) ease-in-out alternate infinite;
+	}
 
-  .triangle-svg > *:nth-child(8) {
-    animation: 1s fader calc(var(--delay) + 0.7s) ease-in-out alternate infinite;
-  }
+	.triangle-svg > *:nth-child(8) {
+		animation: 1s fader calc(var(--delay) + 0.7s) ease-in-out alternate infinite;
+	}
 
-  .triangle-svg > *:nth-child(9) {
-    animation: 1s fader calc(var(--delay) + 0.8s) ease-in-out alternate infinite;
-  }
+	.triangle-svg > *:nth-child(9) {
+		animation: 1s fader calc(var(--delay) + 0.8s) ease-in-out alternate infinite;
+	}
 }
