@@ -72,10 +72,8 @@ This app was a concept created, built & deployed by <a href="https://github.com/
 
 ## What's Next
 
-- The Dark/Light Mode Toggle should be linked to local storage to persist a user's choice on app reload.
 - Accessibility should be checked/rechecked so that all possible updates are incorporated.
 - A section for education/work history should be considered.
-- A banner for 'fun facts' could be added for a more personal feel.
 - A contact me form could be incororated? (This might require a 3rd party subscription)
 
 Note: Any additional features should fit the overall design aesthetic and continue to incororate [shadcn](https://ui.shadcn.com/) components if possible.
