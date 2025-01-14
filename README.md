@@ -35,7 +35,7 @@ This app is meant to help any developer easily showcase their work.
 ## Customization
 
 - To personalize this app's content for yourself, replace the info in `src/assets/resume-info/`.
-- Be sure to maintain the json's format white editting.
+- Be sure to maintain the json's format while editting.
 - All project preview GIFs should be placed in `src/assets/images/projects/`
   - Their basename should share the `"short"` attribute from the project's info in `src/assets/resume-info/projects`.
   - example → a gif for a project with the attribute `"short":"spaceship"` would be saved as `src/assets/images/projects/spaceship.gif`
