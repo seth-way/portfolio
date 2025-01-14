@@ -44,7 +44,7 @@ This app is meant to help any developer easily showcase their work.
 - Add your own headshot & save it at `src/assets/images/headShot.jpg`.
 - Save the most recent version of your resume at `src/assets/resume.pdf`.
 - Update the browser title to your own in the index.html `<title>` tag.
-- The 'Miscellaneous' section is very personalized. Feel free to use any of these custom cards, or alternatively, you can comment out this entire section quickly in App.jsx to remove it.
+- The 'Mini-Apps' section is very personalized. Feel free to use any of these custom cards, or alternatively, you can comment out this entire section quickly in App.jsx to remove it.
 - If you use this app, I'd love to hear about it! Give me a shoutout on linkedin & a star on github.
 
 ## Deploy
