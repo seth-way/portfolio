@@ -1,4 +1,6 @@
 import { useEffect, useRef } from 'react';
+import { SpinningBorder } from 'react-spinning-border';
+import headShot from '@/assets/images/headShot.jpg';
 import ProfilePic from '@/components/ui/profile-pic';
 import background from '@/assets/resume-info/background.json';
 import resume from '@/assets/resume.pdf';
@@ -41,7 +43,9 @@ const About = () => {
       ref={ref}
     >
       <div className='flex flex-col md:flex-row items-center gap-8'>
-        <ProfilePic />
+        <div className='w-[min(50vh,50vw)] min-w-124 max-w-80'>
+          <SpinningBorder image={headShot} size='full' border='sm' />
+        </div>
         <section
           id='about-me-bio'
           className='flex flex-col items-center gap-2 [&_b]:text-blue-500'
@@ -52,8 +56,7 @@ const About = () => {
               key={`bio_${idx}`}
               className='max-w-sm'
               dangerouslySetInnerHTML={{ __html: bioSection }}
-            >
-            </p>
+            ></p>
           ))}
         </section>
       </div>
