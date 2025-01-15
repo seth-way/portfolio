@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { SpinningBorder } from 'react-spinning-border';
 import headShot from '@/assets/images/headShot.jpg';
-import ProfilePic from '@/components/ui/profile-pic';
 import background from '@/assets/resume-info/background.json';
 import resume from '@/assets/resume.pdf';
 const { fullName, bio, email, phone, address } = background;

@@ -8,14 +8,17 @@
   "javascript": "JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
   "nextjs": "next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white",
   "node": "Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white",
+  "npm":"npm-CB3837?style=for-the-badge&logo=npm&logoColor=white",
   "postgresql": "PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white",
   "python": "Python-3776AB?style=for-the-badge&logo=python&logoColor=white",
   "react": "React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB]",
   "react-router": "React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white",
   "rollup":"rollup%20js-EC4A3F?style=for-the-badge&logo=rollup.js&logoColor=white",
   "socket-io":"Socket.io-010101?&style=for-the-badge&logo=Socket.io&logoColor=white",
+  "storybook":"storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white",
   "tailwind": "Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white",
   "typescript": "TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white",
   "vercel": "Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white",
-  "vite": "Vite-646CFF.svg?style=for-the-badge&logo=Vite&logoColor=white"
+  "vite": "Vite-646CFF.svg?style=for-the-badge&logo=Vite&logoColor=white",
+  "vitest": "Vitest-%236E9F18?style=for-the-badge&logo=Vitest&logoColor=%23fcd703"
 }

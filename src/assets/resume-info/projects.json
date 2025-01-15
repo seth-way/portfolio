@@ -1,5 +1,22 @@
 [
   {
+    "title": "React-Spinning-Border",
+    "short": "spinning-border",
+    "description": "This npm library package provides a lightweight, customizable React component that creates a visually engaging, scroll-linked spinning border effect. Built with TypeScript, styled with TailwindCSS, and animated using Motion, it is easy to use and ideal for creating eye-catching avatar or profile image components.",
+    "contributors": [],
+    "tech": ["react", "typescript", "framer", "npm", "storybook", "vite", "vitest"],
+    "notes": [
+      "This component was initially developed for my portfolio page to create a visually engaging, scroll-linked spinning border effect for my profile picture.",
+      "I decided to make it accessible to a wider audience by publishing it as an npm package: `react-spinning-border`.",
+      "I used Storybook to create a working demo with detailed documentation, including usage examples and a comprehensive API reference for all customizable props.",
+      "The component supports full customization via props, allowing users to configure border gradients, sizes, padding, and animation speed.",
+      "Links to the Storybook and npm package can be found on the repo's ReadMe."
+    ],
+    "links": {
+      "repo": "https://github.com/seth-way/react-spinning-border"
+    }
+  },
+  {
     "title": "Hall-O-Famers",
     "short": "hof",
     "description": "This fullstack Next.js sports trivia application challenges users to guess a famous athlete based on the player's history and accomplishments. Incorrect answers are punished with a lowered score. Quicker answers result in a higher score.",
