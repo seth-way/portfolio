@@ -14,10 +14,10 @@ function App() {
 	return (
 		<TooltipProvider>
 			<NavBar />
-			<Home />
+			{/* <Home />
 			<About />
 			<Skills />
-			<Projects />
+			<Projects /> */}
 			<Minis />
 			<Footer />
 		</TooltipProvider>

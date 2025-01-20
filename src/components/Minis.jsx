@@ -3,11 +3,12 @@ import { Card } from '@/components/ui/card';
 import DotsBG from './DotsBG';
 import Item from '@/components/ui/misc-item';
 import Airborne from '@/components/misc/Airborne';
+import Algorithms from '@/components/misc/Algorithms';
+import HP from '@/components/misc/HP';
 import Joke from '@/components/misc/Joke';
 import Slideshow from '@/components/misc/Slideshow';
-import Algorithms from '@/components/misc/Algorithms';
 
-const items = [<Joke />, <Algorithms />, <Airborne />, <Slideshow />];
+const items = [<Joke />, <Algorithms />, <Airborne />, <HP/>, <Slideshow />];
 
 const Minis = () => {
 	const [active, setActive] = useState('mini-apps');
