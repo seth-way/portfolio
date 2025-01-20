@@ -8,8 +8,8 @@ import HP from '@/components/misc/HP';
 import Joke from '@/components/misc/Joke';
 import Slideshow from '@/components/misc/Slideshow';
 
-//const items = [<Joke />, <Algorithms />, <Airborne />, <Slideshow />];
-const items = [<HP />];
+const items = [<Joke />, <Algorithms />, <Airborne />, <HP/>, <Slideshow />];
+
 const Minis = () => {
 	const [active, setActive] = useState('mini-apps');
 
