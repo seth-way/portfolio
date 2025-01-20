@@ -55,7 +55,7 @@ export default function HP({ active }) {
       onMouseMove={event => throttledFunction(event)}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
-      className='font-harry pointer-events-auto'
+      className='font-harry pointer-events-auto cursor-none'
     >
       <div className='absolute inset-0 z-30 pointer-events-none flex justify-between'>
         <motion.div
