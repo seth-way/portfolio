@@ -20,21 +20,25 @@ export default function HP({ active }) {
     setIsOpen(active === id);
   }, [active]);
 
-  const handleMouseMove = event => {
+  const updateMove = (x, y) => {
+    setWandPosition({ x, y });
+  };
+
+  const { throttledFunction, cleanup } = useThrottle(updateMove, 25);
+
+  const handleMove = (event, type) => {
     if (cardRef.current) {
       const rect = cardRef.current.getBoundingClientRect();
-      setWandPosition({
-        x: event.clientX - rect.left,
-        y: event.clientY - rect.top,
-      });
+      const latest = type === 'mouse' ? event : event.touches[0];
+      const x = latest.clientX - rect.left;
+      const y = latest.clientY - rect.top;
+      throttledFunction(x, y);
     }
   };
 
   const handleClick = () => {
     setClickCount(prev => prev + 1);
   };
-
-  const { throttledFunction, cleanup } = useThrottle(handleMouseMove, 25);
 
   useEffect(() => {
     return () => {
@@ -52,11 +56,18 @@ export default function HP({ active }) {
     <div
       id={id}
       ref={cardRef}
-      onMouseMove={event => throttledFunction(event)}
+      onMouseMove={event => handleMove(event, 'mouse')}
       onMouseLeave={handleMouseLeave}
+      onTouchStart={event => handleMove(event, 'touch')}
+      onTouchMove={event => handleMove(event, 'touch')}
+      onTouchEnd={handleMouseLeave}
       onClick={handleClick}
-      className='font-harry pointer-events-auto cursor-none'
+      className='font-harry pointer-events-auto cursor-none '
     >
+      <div
+        className='absolute inset-4 bg-transparent z-40 touch-none'
+        aria-hidden='true'
+      />
       <div className='absolute inset-0 z-30 pointer-events-none flex justify-between'>
         <motion.div
           animate={{ width: isOpen ? 0 : '50%' }}
